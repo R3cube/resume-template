@@ -12,11 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install wkhtmltopdf and curl
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wkhtmltopdf curl python3
-
       - name: Build filename from config
         id: meta
         run: |
@@ -36,31 +31,23 @@ jobs:
           echo "file_path=$FILE" >> $GITHUB_OUTPUT
           echo "pdf_name=${SAFE_NAME}.pdf" >> $GITHUB_OUTPUT
 
-      - name: Build & Serve Jekyll site in container
+      - name: Build, Serve, and Export PDF inside container
         run: |
-          docker run -d --name jekyll-server -p 8080:4000 \
+          docker run --rm \
             -v ${{ github.workspace }}:/srv/jekyll \
-            jekyll/builder:latest /bin/bash -c \
-              "chmod -R 777 /srv/jekyll && jekyll serve --host 0.0.0.0 --port 4000 --future"
-
-          # Wait until server responds
-          for i in {1..15}; do
-            if curl -s -o /dev/null http://localhost:8080; then
-              echo "Jekyll server is live"
-              break
-            fi
-            echo "Waiting for Jekyll server..."
-            sleep 2
-          done
-
-      - name: Render PDF from localhost
-        run: |
-          wkhtmltopdf \
-            --viewport-size 2000x2000 --orientation Portrait --page-size A4 \
-            --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
-            --javascript-delay 2000 --enable-local-file-access \
-            "http://localhost:8080/index.html" \
-            "${{ steps.meta.outputs.file_path }}"
+            jekyll/builder:latest /bin/bash -c "
+              chmod -R 777 /srv/jekyll && \
+              jekyll build --future && \
+              jekyll serve --host 0.0.0.0 --port 4000 & \
+              sleep 5 && \
+              apt-get update && apt-get install -y wkhtmltopdf && \
+              wkhtmltopdf \
+                --viewport-size 2000x2000 --orientation Portrait --page-size A4 \
+                --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
+                --javascript-delay 2000 --enable-local-file-access \
+                http://localhost:4000/index.html \
+                /srv/jekyll/${{ steps.meta.outputs.file_path }}
+            "
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
