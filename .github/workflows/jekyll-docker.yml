@@ -15,9 +15,8 @@ jobs:
     steps:
       - name: Wait for Pages to finish
         run: |
-          echo "Waiting 50 seconds for GitHub Pages deployment to complete..."
-          sleep 50
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          echo "Waiting 120 seconds for GitHub Pages deployment to complete..."
+          sleep 120
 
   generate-pdf:
     runs-on: ubuntu-latest
