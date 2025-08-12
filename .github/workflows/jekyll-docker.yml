@@ -1,13 +1,47 @@
-name: Generate PDF from GitHub Pages
+name: Jekyll site CI + PDF
 
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  push:
+    branches: [ "employee/**" ]
+  pull_request:
+    branches: [ "employee/**" ]
+
 
 jobs:
+  wait-for-pages:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.check.outputs.ready }}
+    steps:
+      - name: Wait for "pages build and deployment" to finish
+        id: check
+        run: |
+          echo "Waiting for 'pages build and deployment' to complete..."
+          MAX_ATTEMPTS=20
+          ATTEMPT=1
+          while [ $ATTEMPT -le $MAX_ATTEMPTS ]; do
+            STATUS=$(gh run list --workflow "pages build and deployment" --branch main --json status --jq '.[0].status' || echo "unknown")
+            CONCLUSION=$(gh run list --workflow "pages build and deployment" --branch main --json conclusion --jq '.[0].conclusion' || echo "unknown")
+
+            echo "Attempt $ATTEMPT: Status=$STATUS, Conclusion=$CONCLUSION"
+            if [ "$STATUS" = "completed" ] && [ "$CONCLUSION" = "success" ]; then
+              echo "ready=true" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+
+            ATTEMPT=$((ATTEMPT+1))
+            sleep 15
+          done
+
+          echo "Timed out waiting for Pages deployment"
+          exit 1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   generate-pdf:
     runs-on: ubuntu-latest
+    needs: wait-for-pages
+    if: needs.wait-for-pages.outputs.ready == 'true'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,7 +69,6 @@ jobs:
             --javascript-delay 2000 --enable-local-file-access \
             "$SITE_URL" "${{ steps.meta.outputs.file_name }}"
 
-      # Optional: upload PDF to workflow artifacts
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
