@@ -1,13 +1,10 @@
 /* assets/css/_print.scss */
 /* Print looks like screen; A4 full-bleed; sane breaks; wkhtmltopdf-friendly */
 
-@page {
-  size: A4;
-  margin: 0;
-}
+@page { size: A4; margin: 0; }
 
 @media print {
-  /* Match screen */
+  /* Match screen + keep colors/backgrounds */
   html, body {
     margin: 0;
     padding: 0;
@@ -16,109 +13,83 @@
   }
   body { font-size: 16px; line-height: 1.5; }
 
-  /* A4 canvas only in print */
+  /* Use the full A4 width on print */
   .container {
     width: 210mm;
     height: 297mm;
     margin: 0 auto;
     padding: 0;
   }
+  .wrapper {
+    width: 210mm !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
 
-  /* Trim gutters at the page edge */
+  /* Remove gutters at the page edge */
   .columns { margin-left: 0; margin-right: 0; }
   .column  { padding-left: 0; padding-right: 0; }
 
-  /* Make sure images/logos render */
+  /* Ensure images/logos render */
   img, svg, .avatar {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     max-width: 100% !important;
-    break-inside: avoid;
-    page-break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-               column-break-inside: avoid;
+    break-inside: avoid; page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; column-break-inside: avoid;
   }
 
-  /* Keep screen typography (undo old print downsizing) */
+  /* Keep screen typography */
   .page-header { padding: 1.5rem 0; }
   .page-header .header-name {
-    font-size: 3rem;
-    font-weight: 900;
-    margin: 1rem 0 0;
-    letter-spacing: -.15rem;
-    line-height: 1;
+    font-size: 3rem; font-weight: 900; margin: 1rem 0 0;
+    letter-spacing: -.15rem; line-height: 1;
   }
-  .section-header {
-    margin-bottom: 1.5rem;
-    border-top-width: 4px;
-    border-bottom-width: 2px;
-  }
+  .section-header { margin-bottom: 1.5rem; border-top-width: 4px; border-bottom-width: 2px; }
   .section-header h2 {
-    font-size: 1.75rem;
-    letter-spacing: -.05rem;
-    line-height: 1.5rem;
-    margin: 0;
-    font-weight: 900;
+    font-size: 1.75rem; letter-spacing: -.05rem; line-height: 1.5rem; margin: 0; font-weight: 900;
   }
   .content-section { margin: 0 0 3rem; }
-  .content-section .resume-item       { margin-bottom: 2rem; }
-  .content-section .resume-item-title { font-size: 1.5rem; line-height: 1; font-weight: 700; letter-spacing: -.05rem; margin: 0 0 .75rem; }
-  .content-section .resume-item-details { font-size: 1.125rem; line-height: 1; margin: 0 0 .75rem; font-style: normal; }
+  .content-section .resume-item { margin-bottom: 2rem; }
+  .content-section .resume-item-title {
+    font-size: 1.5rem; line-height: 1; font-weight: 700; letter-spacing: -.05rem; margin: 0 0 .75rem;
+  }
+  .content-section .resume-item-details {
+    font-size: 1.125rem; line-height: 1; margin: 0 0 .75rem; font-style: normal;
+  }
 
-  /* ================================
-     Skills → two columns in PRINT
-     (wkhtmltopdf can't do CSS Grid)
-     ================================ */
+  /* ===== Skills: two columns (wkhtmltopdf can't do CSS Grid) ===== */
   .skills-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: block !important; /* override grid */
-    /* multicol fallback */
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 32px;
-       -moz-column-gap: 32px;
-            column-gap: 32px;
+    list-style: none; margin: 0; padding: 0;
+    display: block !important;            /* kill grid */
+    -webkit-column-count: 2; column-count: 2;
+    -webkit-column-gap: 32px; column-gap: 32px;
+    -webkit-column-fill: balance; column-fill: balance;
   }
   .skill-row{
-    /* keep each row intact */
-    display: inline-block;   /* behaves well in multicol */
-    width: 100%;
-    break-inside: avoid;
-    page-break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-               column-break-inside: avoid;
+    /* allow multicol to flow; don't force full width */
+    display: block;              /* not inline-block */
+    /* no width:100% */
+    break-inside: avoid; page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; column-break-inside: avoid;
     border-top: 1px solid rgba(0,0,0,.08);
-    padding-top: 12px;
-    margin-top: 12px;
+    padding-top: 12px; margin-top: 12px;
   }
   .skill-name{ font-size: 1.05rem; line-height: 1.35; font-weight: 700; letter-spacing: -.02rem; display: block; }
   .skill-desc{ font-size: 0.98rem; line-height: 1.35; color: #6b6b6b; display: block; }
 
-  /* Page-break rules:
-     keep atomic items together, allow sections to flow (prevents big blank tails) */
-  .resume-item {
-    break-inside: avoid; page-break-inside: avoid;
-  }
-  .content-section,
-  .columns,
-  .column {
-    break-inside: auto; page-break-inside: auto; /* allow break if needed */
-  }
-  .section-header h2 {
-    break-after: auto; page-break-after: auto;   /* don't over-protect headings */
-  }
-  .page-header {
-    break-inside: avoid; page-break-inside: avoid; /* keep avatar + heading together */
-  }
+  /* Page-break rules: keep items together, let sections flow to avoid big blanks */
+  .resume-item { break-inside: avoid; page-break-inside: avoid; }
+  .content-section, .columns, .column { break-inside: auto; page-break-inside: auto; }
+  .section-header h2 { break-after: auto; page-break-after: auto; }
+  .page-header { break-inside: avoid; page-break-inside: avoid; }
 
   /* Widows/orphans */
   p, li { orphans: 2; widows: 2; }
 
-  /* Don’t append raw URLs */
+  /* No URL after links */
   a[href^="http"]::after { content: none !important; }
 
   /* Helpers */
