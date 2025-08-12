@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build filename from config
+      # Build filename from config
+      - name: Extract filename from _config.yml
         id: meta
         run: |
           if [ ! -f "_config.yml" ]; then
@@ -31,25 +32,37 @@ jobs:
           echo "file_path=$FILE" >> $GITHUB_OUTPUT
           echo "pdf_name=${SAFE_NAME}.pdf" >> $GITHUB_OUTPUT
 
-      - name: Build, Serve, and Export PDF inside container
+      # Build & serve inside jekyll/jekyll (Debian-based)
+      - name: Build and serve Jekyll site
         run: |
-          docker run --rm \
+          docker run -d --name jekyll-server -p 8080:4000 \
             -v ${{ github.workspace }}:/srv/jekyll \
-            jekyll/builder:latest /bin/bash -c "
+            jekyll/jekyll:latest /bin/bash -c "\
+              apt-get update && \
+              apt-get install -y wkhtmltopdf curl && \
               chmod -R 777 /srv/jekyll && \
               jekyll build --future && \
-              jekyll serve --host 0.0.0.0 --port 4000 & \
-              sleep 5 && \
-              apt-get update && apt-get install -y wkhtmltopdf && \
-              wkhtmltopdf \
-                --viewport-size 2000x2000 --orientation Portrait --page-size A4 \
-                --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
-                --javascript-delay 2000 --enable-local-file-access \
-                http://localhost:4000/index.html \
-                /srv/jekyll/${{ steps.meta.outputs.file_path }}
-            "
+              jekyll serve --host 0.0.0.0 --port 4000"
 
-      - name: Upload artifact
+          # Wait for the Jekyll server
+          for i in {1..20}; do
+            if curl -s -o /dev/null http://localhost:8080; then
+              echo "Jekyll server is live"
+              break
+            fi
+            echo "Waiting for Jekyll server..."
+            sleep 2
+          done
+
+          # Render PDF from served site
+          docker exec jekyll-server wkhtmltopdf \
+            --orientation Portrait --page-size A4 \
+            --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
+            --javascript-delay 2000 --enable-local-file-access \
+            "http://localhost:4000/index.html" \
+            "/srv/jekyll/${{ steps.meta.outputs.file_path }}"
+
+      - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.meta.outputs.pdf_name }}
