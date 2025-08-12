@@ -25,9 +25,15 @@ jobs:
       - name: Read site name from _config.yml
         id: meta
         run: |
-          SITE_NAME=$(grep '^name:' _config.yml | sed 's/name:[ ]*//')
-          FILE_NAME="${SITE_NAME}.pdf"
-          echo "file_name=${FILE_NAME}" >> $GITHUB_OUTPUT
+          RAW_NAME=$(grep '^resume_name:' _config.yml | sed 's/resume_name:[ ]*//' | tr -d '\r"')
+          if [ -z "$RAW_NAME" ]; then
+            RAW_NAME="site"
+          fi
+          SLUG_NAME=$(echo "$RAW_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/_/g' | sed 's/_\+/_/g' | sed 's/^_//;s/_$//')
+          FILE_NAME="${SLUG_NAME}.pdf"
+          echo "file_name=$FILE_NAME" >> $GITHUB_OUTPUT
+          echo "FILE_NAME=$FILE_NAME" >> $GITHUB_ENV
+          echo "Using file name: $FILE_NAME"
 
       - name: Install wkhtmltopdf
         run: |
