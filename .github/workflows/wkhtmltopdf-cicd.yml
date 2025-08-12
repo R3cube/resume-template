@@ -4,6 +4,8 @@ on:
   workflow_run:
     workflows: ["pages build and deployment"]
     types: [completed]
+    branches:
+      - "*"
 
 permissions:
   contents: read
@@ -29,7 +31,11 @@ jobs:
       - name: Build filename from config
         id: meta
         run: |
-          echo "site_url=$SITE" >> $GITHUB_OUTPUT
+          # Generate random string for cache busting
+          RAND=$(date +%s%N)
+
+          # Append cache-buster query param to site URL
+          echo "site_url=${SITE}?cache_bust=${RAND}" >> $GITHUB_OUTPUT
 
           if [ ! -f "_config.yml" ]; then
             echo "Missing _config.yml"; exit 1
@@ -61,3 +67,18 @@ jobs:
           path: ${{ steps.meta.outputs.file_path }}
 
       # ---------- Google Drive Upload ----------
+#      - name: Install rclone
+#        if: ${{ secrets.GDRIVE_SERVICE_ACCOUNT != '' }}
+#        run: curl https://rclone.org/install.sh | sudo bash
+#
+#      - name: Configure rclone for Google Drive
+#        if: ${{ secrets.GDRIVE_SERVICE_ACCOUNT != '' }}
+#        run: |
+#          echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT }}" > sa.json
+#          rclone config create gdrive drive scope=drive.file service_account_file=sa.json
+#
+#      - name: Upload to Google Drive
+#        if: ${{ secrets.GDRIVE_SERVICE_ACCOUNT != '' }}
+#        run: |
+#          # Replace YOUR_FOLDER_ID with the Drive folder ID where PDFs should go
+#          rclone copy "${{ steps.meta.outputs.file_path }}" gdrive:"{YOUR_FOLDER_ID}" --drive-root-folder-id {YOUR_FOLDER_ID}
