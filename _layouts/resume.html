@@ -116,19 +116,18 @@
       {% if site.resume_section_skills %}
       <!-- begin Skills -->
       <section class="content-section">
-
         <header class="section-header">
           <h2>Skills</h2>
         </header>
-        <div class="skills-grid">
-          {% for skill in site.data.skills %}
-          <div class="skill-item">
-            <strong>{{ skill.skill }}</strong><br>
-            {{ skill.description }}
-          </div>
-          {% endfor %}
-        </div>
 
+        <ul class="skills-list">
+          {% for skill in site.data.skills %}
+          <li class="skill-row">
+            <span class="skill-name">{{ skill.skill }}</span>
+            <span class="skill-desc">{{ skill.description }}</span>
+          </li>
+          {% endfor %}
+        </ul>
       </section>
       <!-- end Skills -->
       {% endif %}
