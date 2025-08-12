@@ -1,72 +1,46 @@
-name: Jekyll site CI + PDF
+name: Generate PDF from GitHub Pages
 
 on:
-  push:
-    branches: [ "employee/**" ]
-  pull_request:
-    branches: [ "employee/**" ]
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
 
 jobs:
-  build:
+  generate-pdf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # Build filename from config
-      - name: Extract filename from _config.yml
+      - name: Read site name from _config.yml
         id: meta
         run: |
-          if [ ! -f "_config.yml" ]; then
-            echo "Missing _config.yml"; exit 1
-          fi
-          RESUME_NAME=$(grep -E '^resume_name:' "_config.yml" | cut -d':' -f2- | xargs)
+          SITE_NAME=$(grep '^name:' _config.yml | sed 's/name:[ ]*//')
+          FILE_NAME="${SITE_NAME}.pdf"
+          echo "file_name=${FILE_NAME}" >> $GITHUB_OUTPUT
 
-          SAFE_NAME=$(printf "%s" "$RESUME_NAME" \
-            | iconv -t ascii//TRANSLIT 2>/dev/null || printf "%s" "$RESUME_NAME")
-          SAFE_NAME=$(printf "%s" "$SAFE_NAME" \
-            | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr -cd '[:alnum:]_')
-          [ -z "$SAFE_NAME" ] && SAFE_NAME="resume"
-          FILE="pdfs/${SAFE_NAME}.pdf"
-
-          mkdir -p pdfs
-          echo "file_path=$FILE" >> $GITHUB_OUTPUT
-          echo "pdf_name=${SAFE_NAME}.pdf" >> $GITHUB_OUTPUT
-
-      # Build & serve inside jekyll/jekyll (Debian-based)
-      - name: Build and serve Jekyll site
+      - name: Install wkhtmltopdf
         run: |
-          docker run -d --name jekyll-server -p 8080:4000 \
-            -v ${{ github.workspace }}:/srv/jekyll \
-            jekyll/jekyll:latest /bin/bash -c "\
-              apt-get update && \
-              apt-get install -y wkhtmltopdf curl && \
-              chmod -R 777 /srv/jekyll && \
-              jekyll build --future && \
-              jekyll serve --host 0.0.0.0 --port 4000"
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf
 
-          # Wait for the Jekyll server
-          for i in {1..20}; do
-            if curl -s -o /dev/null http://localhost:8080; then
-              echo "Jekyll server is live"
-              break
-            fi
-            echo "Waiting for Jekyll server..."
-            sleep 2
-          done
-
-          # Render PDF from served site
-          docker exec jekyll-server wkhtmltopdf \
+      - name: Generate PDF from GitHub Pages
+        run: |
+          RANDOM_QUERY=$(date +%s)
+          SITE_URL="https://<USERNAME>.github.io/<REPO>/?cache=${RANDOM_QUERY}"
+          echo "Fetching from: $SITE_URL"
+          wkhtmltopdf \
             --orientation Portrait --page-size A4 \
             --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
             --javascript-delay 2000 --enable-local-file-access \
-            "http://localhost:4000/index.html" \
-            "/srv/jekyll/${{ steps.meta.outputs.file_path }}"
+            "$SITE_URL" "${{ steps.meta.outputs.file_name }}"
 
-      - name: Upload PDF artifact
+      # Optional: upload PDF to workflow artifacts
+      - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.meta.outputs.pdf_name }}
-          path: ${{ steps.meta.outputs.file_path }}
+          name: ${{ steps.meta.outputs.file_name }}
+          path: ${{ steps.meta.outputs.file_name }}
 
       # ---------- Google Drive Upload ----------
       # - name: Install rclone
