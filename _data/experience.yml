@@ -1,19 +1,61 @@
 # Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
 
-# Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+- company: Recube Srl
+  position: Cloud Engineer and Trainer
+  duration: Jul, 2023 &mdash; Present
+  summary: >
+    Consultant specializing in designing and implementing scalable cloud infrastructure using AWS technologies.  
+    Experienced in troubleshooting and resolving complex cloud service issues, optimizing performance, and implementing security measures.  
+    Skilled in assisting clients with migration and integration projects, ensuring smooth transitions.  
+    Developed and automated deployment processes with Terraform and AWS CloudFormation.  
+    Conducted cloud computing training workshops for both technical and non-technical audiences.  
+    <ul class="resume-item-list">
+      <li>Designed and implemented cost-effective solutions for cloud migration and deployment</li>
+      <li>Managed and maintained multi-client cloud infrastructure ensuring high availability</li>
+      <li>Delivered custom cloud training programs</li>
+    </ul>
 
+- company: Claranet Srl
+  position: Cloud Support Engineer and Trainer
+  duration: Jan, 2018 &mdash; Jun, 2023
+  summary: >
+    Provided expert support for scalable AWS-based cloud infrastructures.  
+    Led troubleshooting of complex issues, security implementations, and performance optimizations.  
+    Delivered cloud computing training and workshops for businesses and organizations.  
+    <ul class="resume-item-list">
+      <li>Automated deployments with Terraform and AWS CloudFormation</li>
+      <li>Resolved complex technical issues with high customer satisfaction</li>
+      <li>Designed and delivered training to varied audiences</li>
+    </ul>
 
-# Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+- company: XPeppers Srl
+  position: Cloud Support Engineer
+  duration: Jan, 2017 &mdash; Dec, 2017
+  summary: >
+    Provided cloud infrastructure management, technical support, and performance optimization.  
+    Assisted in customer migration and integration projects, ensuring seamless delivery.  
+    <ul class="resume-item-list">
+      <li>Implemented security measures across multiple cloud environments</li>
+      <li>Resolved complex technical issues in high-availability infrastructures</li>
+    </ul>
+
+- company: Chilelli Veronica
+  position: Tobacconist Manager
+  duration: Jul, 2014 &mdash; Jan, 2017
+  summary: >
+    Managed daily operations, inventory, and customer service for a tobacco retail business.  
+    <ul class="resume-item-list">
+      <li>Specialized in cigars, pipes, and tobacco products</li>
+      <li>Implemented marketing strategies to increase sales</li>
+      <li>Optimized stock levels and product availability</li>
+    </ul>
+
+- company: Value Team
+  position: Apprenticeship
+  duration: Jan, 2011 &mdash; Jun, 2011
+  summary: >
+    Conducted analysis of physical security events in the banking sector using data mining techniques.  
+    <ul class="resume-item-list">
+      <li>Gained experience with SQL Server 2008 and WEKA 3.6</li>
+      <li>Performed data-driven assessments to enhance security measures</li>
+    </ul>
