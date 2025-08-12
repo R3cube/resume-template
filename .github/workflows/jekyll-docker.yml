@@ -45,10 +45,13 @@ jobs:
 
       - name: Render PDF from local site
         run: |
-          wkhtmltopdf --viewport-size 2000x2000 --orientation Portrait --page-size A4 \
+          wkhtmltopdf --enable-local-file-access \
+            --viewport-size 2000x2000 --orientation Portrait --page-size A4 \
             --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
             --javascript-delay 2000 \
-            "file://${{ github.workspace }}/_site/index.html" "${{ steps.meta.outputs.file_path }}"
+            "file://${{ github.workspace }}/_site/index.html" \
+            "${{ steps.meta.outputs.file_path }}"
+
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
