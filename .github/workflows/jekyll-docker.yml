@@ -40,6 +40,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y wkhtmltopdf
 
+      # wkhtmltopdf --orientation Portrait --page-size A4 --margin-bottom 0  --margin-left 0 --margin-right 0 --margin-top 0 --javascript-delay 2000 https://r3cube.github.io/resume-template/cache=1 vitae.pdf
       - name: Generate PDF from GitHub Pages
         run: |
           RANDOM_QUERY=$(date +%s)
