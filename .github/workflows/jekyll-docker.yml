@@ -12,13 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build the site in the jekyll/builder container
-        run: |
-          docker run \
-            -v ${{ github.workspace }}:/srv/jekyll \
-            -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-            jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-
       - name: Install wkhtmltopdf and curl
         run: |
           sudo apt-get update
@@ -43,16 +36,21 @@ jobs:
           echo "file_path=$FILE" >> $GITHUB_OUTPUT
           echo "pdf_name=${SAFE_NAME}.pdf" >> $GITHUB_OUTPUT
 
-      - name: Start local HTTP server
+      - name: Build & Serve Jekyll site in container
         run: |
-          python3 -m http.server 8080 --directory _site &
-          for i in {1..10}; do
+          docker run -d --name jekyll-server -p 8080:4000 \
+            -v ${{ github.workspace }}:/srv/jekyll \
+            jekyll/builder:latest /bin/bash -c \
+              "chmod -R 777 /srv/jekyll && jekyll serve --host 0.0.0.0 --port 4000 --future"
+
+          # Wait until server responds
+          for i in {1..15}; do
             if curl -s -o /dev/null http://localhost:8080; then
-              echo "Server is up"
+              echo "Jekyll server is live"
               break
             fi
-            echo "Waiting for server..."
-            sleep 1
+            echo "Waiting for Jekyll server..."
+            sleep 2
           done
 
       - name: Render PDF from localhost
