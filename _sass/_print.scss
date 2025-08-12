@@ -1,0 +1,120 @@
+/* assets/css/_print.scss */
+/* Make print look like screen, keep colors/backgrounds, and control page breaks */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  /* 1) Keep the on-screen look */
+  html, body {
+    margin: 0;
+    padding: 0;
+    /* Keep color fills/backgrounds and SVG fills */
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+  }
+
+  /* Show exactly what you see on screen (undo prior print downsizing) */
+  body { font-size: 16px; line-height: 1.5; }
+
+  .page-header { padding: 1.5rem 0; }
+  .page-header .header-name {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 1rem 0 0;
+    letter-spacing: -.15rem;
+    line-height: 1;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+    /* keep the thick borders like on screen */
+    border-top-width: 4px;
+    border-bottom-width: 2px;
+
+    h2 {
+      font-size: 1.75rem;
+      letter-spacing: -.05rem;
+      line-height: 1.5rem;
+      margin: 0;
+      font-weight: 900;
+    }
+  }
+
+  .content-section {
+    margin: 0 0 3rem;
+  }
+
+  .content-section .resume-item       { margin-bottom: 2rem; }
+  .content-section .resume-item-title {
+    font-size: 1.5rem; line-height: 1; font-weight: 700;
+    letter-spacing: -.05rem; margin: 0 0 .75rem;
+  }
+  .content-section .resume-item-details {
+    font-size: 1.125rem; line-height: 1; margin: 0 0 .75rem; font-style: normal;
+  }
+
+  /* Skills: keep the 2-column layout like screen */
+  .skills-list{ grid-template-columns: 1fr 1fr; gap: 18px 32px; }
+  .skill-row{ border-top: 1px solid rgba(0,0,0,.08); padding-top: 12px; margin-top: 12px; }
+  .skill-name{ font-size: 1.05rem; line-height: 1.35; }
+  .skill-desc{ font-size: 0.98rem; line-height: 1.35; }
+
+  /* Keep "print-only" hidden (to truly mirror the browser) */
+  .print-only { display: none !important; }
+  /* Keep anything marked .no-print hidden as-is */
+  .no-print { display: none !important; }
+
+  /* Ensure the avatar/logo and images render */
+  img, svg, .avatar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 100% !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* 2) Page-break control: avoid splitting sections unless unavoidable */
+  /* Avoid breaking inside key blocks */
+  .page-header,
+  .title-bar,
+  .icon-links,
+  .section-header,
+  .content-section,
+  .content-section .resume-item,
+  .columns,
+  .column {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Give the engine flexibility to break *between* sections/items */
+  .content-section + .content-section { break-before: auto; page-break-before: auto; }
+  .resume-item + .resume-item         { break-before: auto; page-break-before: auto; }
+
+  /* Prevent lonely headings at the bottom of a page */
+  .section-header h2,
+  .resume-item-title {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Typographic widows/orphans control */
+  p, li { orphans: 2; widows: 2; }
+
+  /* Don’t append URLs after links in print */
+  a[href^="http"]::after { content: none !important; }
+
+  /* If your layout relies on background images, keep them */
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* Utilities you can sprinkle in HTML if you need manual control */
+@media print {
+  .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+  .allow-break { break-inside: auto;  page-break-inside: auto; }
+  .force-break { break-before: page;  page-break-before: always; }
+}

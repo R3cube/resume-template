@@ -5,10 +5,9 @@
 
 // Fixed-width, centered column for site content.
 .container {
-  width: 210mm;   // A4 width
-  height: 297mm;  // A4 height
-  margin: 0 auto;
-  padding: 0;     // remove default gutters
+  width: $container-width;
+  margin-right: auto;
+  margin-left: auto;
   @include clearfix;
 }
 
