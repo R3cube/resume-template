@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Jekyll site CI + PDF
 
 on:
   push:
@@ -8,13 +8,50 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - uses: actions/checkout@v4
+
+      - name: Build the site in the jekyll/builder container
+        run: |
+          docker run \
+            -v ${{ github.workspace }}:/srv/jekyll \
+            -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+            jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
+      - name: Install wkhtmltopdf
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf
+
+      - name: Build filename from config
+        id: meta
+        run: |
+          if [ ! -f "_config.yml" ]; then
+            echo "Missing _config.yml"; exit 1
+          fi
+          RESUME_NAME=$(grep -E '^resume_name:' "_config.yml" | cut -d':' -f2- | xargs)
+
+          SAFE_NAME=$(printf "%s" "$RESUME_NAME" \
+            | iconv -t ascii//TRANSLIT 2>/dev/null || printf "%s" "$RESUME_NAME")
+          SAFE_NAME=$(printf "%s" "$SAFE_NAME" \
+            | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr -cd '[:alnum:]_')
+          [ -z "$SAFE_NAME" ] && SAFE_NAME="resume"
+          FILE="pdfs/${SAFE_NAME}.pdf"
+
+          mkdir -p pdfs
+          echo "file_path=$FILE" >> $GITHUB_OUTPUT
+          echo "pdf_name=${SAFE_NAME}.pdf" >> $GITHUB_OUTPUT
+
+      - name: Render PDF from local site
+        run: |
+          wkhtmltopdf --viewport-size 2000x2000 --orientation Portrait --page-size A4 \
+            --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
+            --javascript-delay 2000 \
+            "file://${{ github.workspace }}/_site/index.html" "${{ steps.meta.outputs.file_path }}"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.meta.outputs.pdf_name }}
+          path: ${{ steps.meta.outputs.file_path }}
