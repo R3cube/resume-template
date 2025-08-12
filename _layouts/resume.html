@@ -29,9 +29,13 @@
         <div class="title-bar no-print">
           <h2 class="header-title" itemprop="jobTitle">{{ site.resume_title }}</h2>
           
-          {% if site.resume_social_links.resume_github_url or site.resume_social_links.resume_linkedin_url or site.resume_social_links.resume_website_url %}
-            {% include icon-links.html %}
-          {% endif %}
+            {% assign gh = site.resume_social_links.resume_github_url | strip %}
+            {% assign li = site.resume_social_links.resume_linkedin_url | strip %}
+            {% assign wb = site.resume_social_links.resume_website_url | strip %}
+
+            {% if gh != "" or li != "" or wb != "" %}
+              {% include icon-links.html %}
+            {% endif %}
         </div>
 
         <div class="executive-summary" itemprop="description">
