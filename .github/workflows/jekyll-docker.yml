@@ -40,9 +40,14 @@ jobs:
           SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/?cache=${RANDOM_QUERY}"
           echo "Fetching from: $SITE_URL"
           wkhtmltopdf \
-            --orientation Portrait --page-size A4 \
-            --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
-            --javascript-delay 2000 --enable-local-file-access \
+            --viewport-size 2000x2000 \
+            --orientation Portrait \
+            --page-size A4 \
+            --margin-bottom 0 \
+            --margin-left 0 \
+            --margin-right 0 \
+            --margin-top 0 \
+            --javascript-delay 2000 \
             "$SITE_URL" "${{ steps.meta.outputs.file_name }}"
 
       - name: Upload PDF
