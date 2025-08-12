@@ -6,14 +6,13 @@ on:
   pull_request:
     branches: [ "employee/**" ]
 
-
 jobs:
   wait-for-pages:
     runs-on: ubuntu-latest
     steps:
       - name: Wait for Pages to finish
         run: |
-          echo "Waiting 1 seconds for GitHub Pages deployment to complete..."
+          echo "Waiting 120 seconds for GitHub Pages deployment to complete..."
           sleep 1
 
   generate-pdf:
@@ -38,7 +37,7 @@ jobs:
       - name: Generate PDF from GitHub Pages
         run: |
           RANDOM_QUERY=$(date +%s)
-          SITE_URL="https://<USERNAME>.github.io/<REPO>/?cache=${RANDOM_QUERY}"
+          SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/?cache=${RANDOM_QUERY}"
           echo "Fetching from: $SITE_URL"
           wkhtmltopdf \
             --orientation Portrait --page-size A4 \
@@ -52,7 +51,7 @@ jobs:
           name: ${{ steps.meta.outputs.file_name }}
           path: ${{ steps.meta.outputs.file_name }}
 
-      # ---------- Google Drive Upload ----------
+      # ---------- Google Drive Upload (optional) ----------
       # - name: Install rclone
       #   if: ${{ secrets.GDRIVE_SERVICE_ACCOUNT != '' }}
       #   run: curl https://rclone.org/install.sh | sudo bash
@@ -66,5 +65,4 @@ jobs:
       # - name: Upload to Google Drive
       #   if: ${{ secrets.GDRIVE_SERVICE_ACCOUNT != '' }}
       #   run: |
-      #     # Replace YOUR_FOLDER_ID with the Drive folder ID where PDFs should go
-      #     rclone copy "${{ steps.meta.outputs.file_path }}" gdrive:"{YOUR_FOLDER_ID}" --drive-root-folder-id {YOUR_FOLDER_ID}
+      #     rclone copy "${{ steps.meta.outputs.file_name }}" gdrive:"{YOUR_FOLDER_ID}" --drive-root-folder-id {YOUR_FOLDER_ID}
