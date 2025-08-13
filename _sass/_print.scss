@@ -1,98 +1,139 @@
-/* assets/css/_print.scss */
-/* Print looks like screen; A4 full-bleed; sane breaks; wkhtmltopdf-friendly */
+/* ===========================
+   PRINT — A4, wkhtmltopdf-friendly
+   =========================== */
 
-@page { size: A4; margin: 0; }
+@page {
+  size: A4;
+  margin: 12mm 14mm;                  /* small but safe margins so nothing clips */
+}
 
+/* Everything in print mode matches screen typography/colors */
 @media print {
-  /* Match screen + keep colors/backgrounds */
+
   html, body {
     margin: 0;
     padding: 0;
     -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
   }
-  body { font-size: 16px; line-height: 1.5; }
 
-  /* Use the full A4 width on print */
-  .container {
-    width: 210mm;
-    height: 297mm;
-    margin: 0 auto;
-    padding: 0;
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111;
   }
+
+  /* Layout uses the full page width; no “mystery” gutters */
+  .container,
   .wrapper {
     width: 210mm !important;
     max-width: none !important;
-    padding: 0 !important;
     margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box;
   }
 
-  /* Remove gutters at the page edge */
-  .columns { margin-left: 0; margin-right: 0; }
-  .column  { padding-left: 0; padding-right: 0; }
+  .columns   { margin-left: 0; margin-right: 0; }
+  .column    { padding-left: 0; padding-right: 0; }
 
-  /* Ensure images/logos render */
+  /* Images/logos never get split */
   img, svg, .avatar {
     display: block !important;
     visibility: visible !important;
-    opacity: 1 !important;
     max-width: 100% !important;
-    break-inside: avoid; page-break-inside: avoid;
-    -webkit-column-break-inside: avoid; column-break-inside: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
   }
 
-  /* Keep screen typography */
-  .page-header { padding: 1.5rem 0; }
+  /* Typography */
+  .page-header { padding: 1.5rem 0; break-inside: avoid; page-break-inside: avoid; }
   .page-header .header-name {
     font-size: 3rem; font-weight: 900; margin: 1rem 0 0;
     letter-spacing: -.15rem; line-height: 1;
   }
-  .section-header { margin-bottom: 1.5rem; border-top-width: 4px; border-bottom-width: 2px; }
+
+  .section-header {
+    margin: 0 0 1.5rem;
+    border-top-width: 4px; border-bottom-width: 2px;
+    /* don’t allow a header to sit at the very bottom of a page */
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
   .section-header h2 {
-    font-size: 1.75rem; letter-spacing: -.05rem; line-height: 1.5rem; margin: 0; font-weight: 900;
-  }
-  .content-section { margin: 0 0 3rem; }
-  .content-section .resume-item { margin-bottom: 2rem; }
-  .content-section .resume-item-title {
-    font-size: 1.5rem; line-height: 1; font-weight: 700; letter-spacing: -.05rem; margin: 0 0 .75rem;
-  }
-  .content-section .resume-item-details {
-    font-size: 1.125rem; line-height: 1; margin: 0 0 .75rem; font-style: normal;
+    font-size: 1.75rem; line-height: 1.5rem; margin: 0; font-weight: 900;
+    letter-spacing: -.05rem;
   }
 
-  /* ===== Skills: two columns (wkhtmltopdf can't do CSS Grid) ===== */
+  /* ===========================
+     Pagination rules (the important part)
+     =========================== */
+
+  /* Keep each resume item together with its title/details/bullets */
+  .resume-item {
+    margin: 0 0 2rem;
+    break-inside: avoid-page;          /* modern */
+    page-break-inside: avoid;          /* legacy/webkit/wkhtmltopdf */
+    -webkit-column-break-inside: avoid;
+  }
+
+  /* Also prevent splits right after/between key blocks */
+  .resume-item-title,
+  .resume-item-details,
+  .resume-item-copy,
+  .resume-item-list {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+  }
+
+  /* Bullet lists: allow long lists to flow, but don’t split a single li */
+  .resume-item-list { margin: 0; padding-left: 1.25rem; }
+  .resume-item-list li {
+    orphans: 2; widows: 2;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  /* Let whole sections flow if they’re huge, but avoid big blanks */
+  .content-section {
+    margin: 0 0 3rem;
+    break-inside: auto;                /* allow section to flow, not force keep-together */
+    page-break-inside: auto;
+  }
+
+  /* Skills: keep two columns, but don’t split a single skill row */
   .skills-list{
     list-style: none; margin: 0; padding: 0;
-    display: block !important;            /* kill grid */
+    display: block !important;         /* kill grid for wkhtmltopdf */
     -webkit-column-count: 2; column-count: 2;
     -webkit-column-gap: 32px; column-gap: 32px;
     -webkit-column-fill: balance; column-fill: balance;
   }
   .skill-row{
-    /* allow multicol to flow; don't force full width */
-    display: block;              /* not inline-block */
-    /* no width:100% */
-    break-inside: avoid; page-break-inside: avoid;
-    -webkit-column-break-inside: avoid; column-break-inside: avoid;
+    display: block;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
     border-top: 1px solid rgba(0,0,0,.08);
     padding-top: 12px; margin-top: 12px;
   }
   .skill-name{ font-size: 1.05rem; line-height: 1.35; font-weight: 700; letter-spacing: -.02rem; display: block; }
   .skill-desc{ font-size: 0.98rem; line-height: 1.35; color: #6b6b6b; display: block; }
 
-  /* Page-break rules: keep items together, let sections flow to avoid big blanks */
-  .resume-item { break-inside: avoid; page-break-inside: avoid; }
-  .content-section, .columns, .column { break-inside: auto; page-break-inside: auto; }
-  .section-header h2 { break-after: auto; page-break-after: auto; }
-  .page-header { break-inside: avoid; page-break-inside: avoid; }
+  /* Helpers: force or prevent page breaks where you want */
+  .force-break     { break-before: page; page-break-before: always; }
+  .avoid-break     { break-inside: avoid-page; page-break-inside: avoid; }
+  .no-print        { display: none !important; }
+  .print-only      { display: block !important; }
 
-  /* Widows/orphans */
-  p, li { orphans: 2; widows: 2; }
+  /* Widows/orphans for paragraphs too */
+  p { orphans: 2; widows: 2; }
 
-  /* No URL after links */
+  /* Don’t append raw URLs after links */
   a[href^="http"]::after { content: none !important; }
-
-  /* Helpers */
-  .force-break { break-before: page; page-break-before: always; }
-  .avoid-break { break-inside: avoid; page-break-inside: avoid; }
 }
+
+/* Optional: a tiny tweak so long URLs or roles can wrap instead of forcing splits */
+.resume-item-details,
+.resume-item-title { word-wrap: break-word; overflow-wrap: anywhere; }
