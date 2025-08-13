@@ -3,94 +3,94 @@
 - company: Recube
   position: Cloud Innovation Lead - Research & Development
   duration: Jun, 2023 — Present
-  summary: Focus on developing and implementing training strategies that align with Recube's educational ambitions in a dynamic academic landscape. Engage extensively with students and academics to design programs that address immediate learning needs while anticipating future requirements.
+  summary: Lead the development and implementation of training strategies aligned with Recube's educational vision in a dynamic academic environment. Collaborate extensively with students and faculty to design programs addressing current learning needs while anticipating future skills demands.
     <ul class="resume-item-list">
-      <li>Forged collaborations with prestigious research institutions and universities to drive innovation in teaching methodologies</li>
-      <li>Explored and implemented cutting-edge learning technologies to enhance student engagement</li>
-      <li>Promoted a collaborative learning environment fostering creativity and collective achievement</li>
+      <li>Established partnerships with prestigious research institutions and universities to drive innovation in teaching methodologies</li>
+      <li>Explored and integrated cutting-edge learning technologies to boost student engagement</li>
+      <li>Fostered a collaborative learning culture that encourages creativity and collective achievement</li>
     </ul>
 
 # Licensed Computer Engineer - Freelance (Italy, Certified)
 - company: Ordine degli Ingegneri di Salerno
   position: Licensed Computer Engineer - Freelance (Italy, Certified)
   duration: Jan, 2023 — Present
-  summary: Provide certified engineering services for IT and digital infrastructure projects requiring regulatory compliance and formal accountability. Lead projects from concept to completion with a focus on secure, scalable, and maintainable cloud-native solutions.
+  summary: Provide certified engineering services for IT and digital infrastructure projects requiring regulatory compliance and formal accountability. Manage projects from concept to delivery, focusing on secure, scalable, and maintainable cloud-native architectures.
     <ul class="resume-item-list">
-      <li>Designed and delivered complex infrastructure solutions meeting engineering and legal standards</li>
+      <li>Designed and implemented complex infrastructure solutions meeting both engineering and legal standards</li>
       <li>Integrated AI/ML components into regulated, mission-critical environments</li>
-      <li>Managed end-to-end client engagement, contracts, and technical support</li>
+      <li>Handled full-cycle client engagement, contractual processes, and technical support</li>
     </ul>
 
 # LiveProject Author & Mentor - Data Analytics
 - company: Manning Publications Co.
   position: LiveProject Author & Mentor - Data Analytics
   duration: Sep, 2022 — Present
-  summary: Designed and mentored real-world AWS-based projects, guiding participants in building big data analytics frameworks with real-time processing and predictive analysis.
+  summary: Created and mentored real-world AWS-based projects, guiding learners in building big data analytics frameworks with real-time processing and predictive analysis capabilities.
     <ul class="resume-item-list">
-      <li>Built projects covering streaming data processing using Kinesis, Glue, and Flink</li>
-      <li>Developed historical ETL pipelines with AWS Glue and Step Functions</li>
-      <li>Provided hands-on mentorship, ensuring solutions aligned with industry standards</li>
+      <li>Developed streaming data processing solutions using Kinesis, Glue, and Flink</li>
+      <li>Built historical ETL pipelines with AWS Glue and Step Functions</li>
+      <li>Provided hands-on mentorship ensuring industry-standard best practices</li>
     </ul>
 
 # AWS Authorized Instructor - Champion Level
 - company: Amazon Web Services (AWS)
   position: AWS Authorized Instructor - Champion Level
   duration: Oct, 2018 — Present
-  summary: Deliver official AWS training on architecture, operations, security, and machine learning, maintaining Champion-level status through high learner satisfaction and broad course coverage.
+  summary: Deliver official AWS training on architecture, operations, security, and machine learning, maintaining Champion-level recognition for high learner satisfaction and diverse course delivery.
     <ul class="resume-item-list">
-      <li>Maintained average CSAT score above 4.75</li>
-      <li>Delivered more than four distinct AWS courses annually</li>
-      <li>Prepared professionals for AWS certifications with practical, hands-on training</li>
+      <li>Maintained an average CSAT score above 4.75</li>
+      <li>Delivered over four distinct AWS courses annually</li>
+      <li>Prepared professionals for AWS certifications with practical, hands-on instruction</li>
     </ul>
 
 # Platform Engineer - Principal Architect
 - company: Claranet Italia
   position: Platform Engineer - Principal Architect
   duration: Jan, 2019 — Dec, 2022
-  summary: Led design and implementation of scalable, high-performance systems while managing client relationships and fostering team growth.
+  summary: Directed the design and delivery of scalable, high-performance systems while managing client relationships and mentoring technical teams.
     <ul class="resume-item-list">
-      <li>Developed automation strategies to improve reliability and efficiency</li>
-      <li>Facilitated internal knowledge-sharing and skill development sessions</li>
-      <li>Delivered advanced cloud and big data solutions for diverse clients</li>
+      <li>Developed automation strategies to improve reliability and operational efficiency</li>
+      <li>Led internal knowledge-sharing and skill development initiatives</li>
+      <li>Delivered advanced cloud and big data solutions for diverse industries</li>
     </ul>
 
 # Platform Engineer - Associate Architect
 - company: XPeppers Switzerland
   position: Platform Engineer - Associate Architect
   duration: Jun, 2017 — Dec, 2018
-  summary: Focused on automation and workflow optimization, contributing to system scalability and reliability prior to Claranet acquisition.
+  summary: Focused on automation and workflow optimization, enhancing system scalability and reliability prior to Claranet acquisition.
     <ul class="resume-item-list">
       <li>Implemented scalable infrastructure solutions</li>
-      <li>Enhanced operational efficiency with automation</li>
-      <li>Collaborated on cross-functional technical initiatives</li>
+      <li>Improved operational efficiency through automation</li>
+      <li>Collaborated on cross-functional technical projects</li>
     </ul>
 
 # Quality Assurance Analyst - Telecom Projects
 - company: NTT DATA Italia
   position: Quality Assurance Analyst - Telecom Projects
   duration: Jan, 2017 — Jun, 2017
-  summary: Ensured quality and compliance in the Huawei OCS-TIM project by defining and implementing technical standards.
+  summary: Ensured quality and compliance in the Huawei OCS-TIM project by establishing and enforcing technical standards.
     <ul class="resume-item-list">
-      <li>Reduced defect rates through process improvements</li>
-      <li>Improved QA workflows for faster acceptance testing</li>
+      <li>Reduced defect rates through targeted process improvements</li>
+      <li>Enhanced QA workflows to accelerate acceptance testing</li>
     </ul>
 
 # Erasmus+ Exchange Program - Computer Vision
 - company: Technische Universität Wien
   position: Erasmus+ Exchange Program - Computer Vision
   duration: Sep, 2016 — Dec, 2016
-  summary: Conducted research on biomedical imaging for master thesis, developing calibration software for facial paralysis evaluation.
+  summary: Conducted biomedical imaging research for master’s thesis, developing calibration software for facial paralysis assessment.
     <ul class="resume-item-list">
       <li>Applied image processing and deep learning techniques</li>
-      <li>Adapted to international research collaboration</li>
+      <li>Gained experience in international research collaboration</li>
     </ul>
 
 # Research Intern - Signal Processing & Emotion Recognition
 - company: Infocube
   position: Research Intern - Signal Processing & Emotion Recognition
   duration: Oct, 2014 — Dec, 2014
-  summary: Built a prototype music classification system categorizing songs by mood using signal analysis and data mining.
+  summary: Developed a prototype music classification system that categorizes songs by mood using signal analysis and data mining.
     <ul class="resume-item-list">
-      <li>Applied affective computing concepts with MATLAB and SQL</li>
+      <li>Applied affective computing concepts using MATLAB and SQL</li>
       <li>Achieved high classification accuracy on labeled datasets</li>
     </ul>
