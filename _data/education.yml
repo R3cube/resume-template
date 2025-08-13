@@ -1,13 +1,34 @@
 # Degree
-- degree: Bachelor of Arts, Human Rights
-  uni: Yale University
-  year: 2004 &mdash; 2008
-  awards:
-    - award: Summa Cumme Laude graduate
-  summary: If you had any meaningful roles at college, feel free to write about them here
+- degree: Esame di Stato per abilitazione alla professione di Ingegnere Informatico
+  uni: Ordine degli Ingegneri di Salerno
+  year: 2023
+  awards: []
+  summary: >
+    Superamento dell’esame di Stato per l’abilitazione alla professione di Ingegnere Informatico (Sezione A, Settore C – Informatica), con iscrizione all’Albo professionale e piena responsabilità tecnica.
 
-- degree: High School Diploma
-  uni: Springfield High School
-  year: 2004
-  award: Most likely to succeed
-  summary: You can choose to have either a single or multiple awards
+- degree: Master’s Degree (MSc), Computer Engineering
+  uni: Università degli Studi di Salerno &mdash; Technische Universität Wien
+  year: 2015 — 2017
+  awards:
+    - award: 110L/110 con lode
+  summary: >
+    Formazione avanzata nei campi del software engineering, sistemi embedded, robotica e intelligenza artificiale. 
+    Corsi principali: Distributed Programming, Control System Design, Network Security e Computer Vision. 
+    Ottima performance accademica, con distinzione in AI e Signal Processing. Tesi svolta tramite programma Erasmus+.
+
+- degree: Erasmus+ Exchange Program & Research Thesis (Master’s)
+  uni: Technische Universität Wien
+  year: Sep 2016 — Dec 2016
+  awards: []
+  summary: >
+    Visiting researcher presso il Pattern Recognition and Image Processing Group sotto la supervisione del Prof. Walter Kropatsch. 
+    Tesi su analisi e calibrazione di sistemi multi-view specchiati, con approfondimenti su modellazione geometrica e tecniche di inferenza visiva. 
+    Frequentati corsi avanzati di Computer Vision e partecipazione a ricerche su visual structured representation.
+
+- degree: Bachelor’s Degree (BSc), Computer Engineering
+  uni: Università degli Studi di Salerno
+  year: 2010 — 2015
+  awards:
+    - award: 100/110
+  summary: >
+    Solida base in matematica, programmazione, elettronica, telecomunicazioni e controllo. Percorso con attività di laboratorio e stage, con competenze in web technologies, database, OOP, circuiti digitali, teoria dei segnali. Tesi su strumento automatizzato di sentiment analysis multimediale.

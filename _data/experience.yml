@@ -1,19 +1,96 @@
 # Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+# Cloud Innovation Lead - Research & Development
+- company: Recube
+  position: Cloud Innovation Lead - Research & Development
+  duration: Jun, 2023 — Present
+  summary: Focus on developing and implementing training strategies that align with Recube's educational ambitions in a dynamic academic landscape. Engage extensively with students and academics to design programs that address immediate learning needs while anticipating future requirements.
+    <ul class="resume-item-list">
+      <li>Forged collaborations with prestigious research institutions and universities to drive innovation in teaching methodologies</li>
+      <li>Explored and implemented cutting-edge learning technologies to enhance student engagement</li>
+      <li>Promoted a collaborative learning environment fostering creativity and collective achievement</li>
+    </ul>
 
-# Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+# Licensed Computer Engineer - Freelance (Italy, Certified)
+- company: Ordine degli Ingegneri di Salerno
+  position: Licensed Computer Engineer - Freelance (Italy, Certified)
+  duration: Jan, 2023 — Present
+  summary: Provide certified engineering services for IT and digital infrastructure projects requiring regulatory compliance and formal accountability. Lead projects from concept to completion with a focus on secure, scalable, and maintainable cloud-native solutions.
+    <ul class="resume-item-list">
+      <li>Designed and delivered complex infrastructure solutions meeting engineering and legal standards</li>
+      <li>Integrated AI/ML components into regulated, mission-critical environments</li>
+      <li>Managed end-to-end client engagement, contracts, and technical support</li>
+    </ul>
 
+# LiveProject Author & Mentor - Data Analytics
+- company: Manning Publications Co.
+  position: LiveProject Author & Mentor - Data Analytics
+  duration: Sep, 2022 — Present
+  summary: Designed and mentored real-world AWS-based projects, guiding participants in building big data analytics frameworks with real-time processing and predictive analysis.
+    <ul class="resume-item-list">
+      <li>Built projects covering streaming data processing using Kinesis, Glue, and Flink</li>
+      <li>Developed historical ETL pipelines with AWS Glue and Step Functions</li>
+      <li>Provided hands-on mentorship, ensuring solutions aligned with industry standards</li>
+    </ul>
 
-# Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+# AWS Authorized Instructor - Champion Level
+- company: Amazon Web Services (AWS)
+  position: AWS Authorized Instructor - Champion Level
+  duration: Oct, 2018 — Present
+  summary: Deliver official AWS training on architecture, operations, security, and machine learning, maintaining Champion-level status through high learner satisfaction and broad course coverage.
+    <ul class="resume-item-list">
+      <li>Maintained average CSAT score above 4.75</li>
+      <li>Delivered more than four distinct AWS courses annually</li>
+      <li>Prepared professionals for AWS certifications with practical, hands-on training</li>
+    </ul>
+
+# Platform Engineer - Principal Architect
+- company: Claranet Italia
+  position: Platform Engineer - Principal Architect
+  duration: Jan, 2019 — Dec, 2022
+  summary: Led design and implementation of scalable, high-performance systems while managing client relationships and fostering team growth.
+    <ul class="resume-item-list">
+      <li>Developed automation strategies to improve reliability and efficiency</li>
+      <li>Facilitated internal knowledge-sharing and skill development sessions</li>
+      <li>Delivered advanced cloud and big data solutions for diverse clients</li>
+    </ul>
+
+# Platform Engineer - Associate Architect
+- company: XPeppers Switzerland
+  position: Platform Engineer - Associate Architect
+  duration: Jun, 2017 — Dec, 2018
+  summary: Focused on automation and workflow optimization, contributing to system scalability and reliability prior to Claranet acquisition.
+    <ul class="resume-item-list">
+      <li>Implemented scalable infrastructure solutions</li>
+      <li>Enhanced operational efficiency with automation</li>
+      <li>Collaborated on cross-functional technical initiatives</li>
+    </ul>
+
+# Quality Assurance Analyst - Telecom Projects
+- company: NTT DATA Italia
+  position: Quality Assurance Analyst - Telecom Projects
+  duration: Jan, 2017 — Jun, 2017
+  summary: Ensured quality and compliance in the Huawei OCS-TIM project by defining and implementing technical standards.
+    <ul class="resume-item-list">
+      <li>Reduced defect rates through process improvements</li>
+      <li>Improved QA workflows for faster acceptance testing</li>
+    </ul>
+
+# Erasmus+ Exchange Program - Computer Vision
+- company: Technische Universität Wien
+  position: Erasmus+ Exchange Program - Computer Vision
+  duration: Sep, 2016 — Dec, 2016
+  summary: Conducted research on biomedical imaging for master thesis, developing calibration software for facial paralysis evaluation.
+    <ul class="resume-item-list">
+      <li>Applied image processing and deep learning techniques</li>
+      <li>Adapted to international research collaboration</li>
+    </ul>
+
+# Research Intern - Signal Processing & Emotion Recognition
+- company: Infocube
+  position: Research Intern - Signal Processing & Emotion Recognition
+  duration: Oct, 2014 — Dec, 2014
+  summary: Built a prototype music classification system categorizing songs by mood using signal analysis and data mining.
+    <ul class="resume-item-list">
+      <li>Applied affective computing concepts with MATLAB and SQL</li>
+      <li>Achieved high classification accuracy on labeled datasets</li>
+    </ul>

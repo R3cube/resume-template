@@ -1,12 +1,29 @@
 # Skills
-# Organizational leadership
-- skill: Organizational leadership
-  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
 
-# Communications strategy
-- skill: Communications strategy
-  description: Content and marketing strategy,
+# Cloud Architecture & Engineering
+- skill: Cloud Architecture & Engineering
+  description: Design and deployment of secure, scalable, and cost-optimized AWS solutions, including multi-account architectures, serverless systems, Kubernetes (K8s) clusters, and containerized workloads with Docker.
 
-# Digital content development and creation
-- skill: Digital content development and creation
-  description: Copy writing, graphic design, web design, front-end web development, print design
+# DevOps, Automation & Infrastructure as Code
+- skill: DevOps, Automation & Infrastructure as Code
+  description: Proficient in AWS CloudFormation, Terraform, Ansible, Jenkins, and AWS native CI/CD tools; implementing automated provisioning, configuration management, and continuous delivery pipelines.
+
+# Data Engineering & Analytics
+- skill: Data Engineering & Analytics
+  description: Expertise in ETL workflows, AWS Kinesis, Redshift, Athena, and big data platforms (Hadoop, Spark); experienced in building real-time and historical data processing systems, data lakes, and analytics pipelines.
+
+# Artificial Intelligence & Machine Learning
+- skill: Artificial Intelligence & Machine Learning
+  description: Applied ML/AI solutions using SageMaker, MXNet, and deep learning frameworks; experienced in recommendation systems, computer vision, and generative AI for real-world applications.
+
+# Programming & Software Engineering
+- skill: Programming & Software Engineering
+  description: Skilled in Python, Go, Java, and microservices architecture; applying software design patterns and best practices for maintainable, scalable, and high-performance systems.
+
+# Systems Operations & Management
+- skill: Systems Operations & Management
+  description: Hands-on with AWS Systems Manager, AWS CLI, Linux administration, and troubleshooting high-availability systems in mission-critical contexts.
+
+# Education & Technical Training
+- skill: Education & Technical Training
+  description: AWS Authorized Instructor (Champion Level) delivering official AWS courses, creating project-based learning experiences, and mentoring professionals in cloud, DevOps, and AI topics.
