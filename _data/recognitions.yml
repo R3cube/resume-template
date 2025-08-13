@@ -1,119 +1,100 @@
 # Certifications
 - certification: AWS Certified Data Engineer – Associate
   organization: Amazon Web Services (AWS)
-  issued: Jul, 2025
-  expires: Jul, 2028
+  year: Jul, 2025 - Jul, 2028
   summary: Issued by Amazon Web Services, this certification validates expertise in designing, building, securing, and maintaining data pipelines on AWS.
 
 - certification: AWS Certified AI Practitioner
   organization: Amazon Web Services (AWS)
-  issued: Mar, 2025
-  expires: Mar, 2028
+  year: Mar, 2025 - Mar, 2028
   summary: Issued by Amazon Web Services, confirms foundational knowledge of artificial intelligence and machine learning concepts and AWS AI services.
 
 - certification: AWS Certified Solutions Architect – Professional
   organization: Amazon Web Services (AWS)
-  issued: Apr, 2024
-  expires: Apr, 2027
+  year: Apr, 2024 - Apr, 2027
   summary: Issued by Amazon Web Services, demonstrates advanced ability to design secure, reliable, and cost-optimized AWS solutions for complex use cases.
 
 - certification: AWS re/Start Accredited Instructor
   organization: Amazon Web Services (AWS)
-  issued: Aug, 2023
-  expires: Feb, 2026
+  year: Aug, 2023 - Feb, 2026
   summary: Issued by Amazon Web Services, accredits the holder to deliver AWS re/Start training programs and guide learners toward cloud career readiness.
 
 - certification: AWS Certified Security – Specialty
   organization: Amazon Web Services (AWS)
-  issued: Jul, 2023
-  expires: Jul, 2026
+  year: Jul, 2023 - Jul, 2026
   summary: Issued by Amazon Web Services, validates expertise in securing AWS workloads, including encryption, monitoring, and compliance strategies.
 
 - certification: AWS Certified Database – Specialty
   organization: Amazon Web Services (AWS)
-  issued: Mar, 2023
-  expires: Mar, 2026
+  year: Mar, 2023 - Mar, 2026
   summary: Issued by Amazon Web Services, certifies advanced skills in database design, migration, and optimization on AWS.
 
 - certification: Licensed Computer Engineer
   organization: Ordine degli Ingegneri di Salerno
-  issued: Feb, 2023
+  year: Feb, 2023
   summary: Issued by the Italian Professional Engineers Board, certifies qualification to design, validate, and supervise IT and digital infrastructure projects under national regulations.
 
 - certification: AWS Certified Machine Learning – Specialty
   organization: Amazon Web Services (AWS)
-  issued: Oct, 2022
-  expires: Oct, 2025
+  year: Oct, 2022 - Oct, 2025
   summary: Issued by Amazon Web Services, confirms advanced ML skills including model training, tuning, and deployment on AWS.
 
 - certification: AWS Certified Solutions Architect – Associate
   organization: Amazon Web Services (AWS)
-  issued: Jun, 2022
-  expires: Apr, 2027
+  year: Jun, 2022 Apr, 2027
   summary: Issued by Amazon Web Services, validates ability to design cost-efficient, fault-tolerant architectures on AWS.
 
 - certification: AWS Certified DevOps Engineer – Professional
   organization: Amazon Web Services (AWS)
-  issued: Sep, 2021
-  expires: Aug, 2027
+  year: Sep, 2021 - Aug, 2027
   summary: Issued by Amazon Web Services, demonstrates expertise in implementing and managing continuous delivery systems and automated operations.
 
 - certification: AWS Certified Developer – Associate
   organization: Amazon Web Services (AWS)
-  issued: Sep, 2021
-  expires: Aug, 2027
+  year: Sep, 2021 - Aug, 2027
   summary: Issued by Amazon Web Services, certifies skills in developing and deploying cloud applications using AWS services and SDKs.
 
 - certification: AWS Certified SysOps Administrator – Associate
   organization: Amazon Web Services (AWS)
-  issued: Sep, 2021
-  expires: Aug, 2027
+  year: Sep, 2021 - Aug, 2027
   summary: Issued by Amazon Web Services, confirms ability to deploy, manage, and operate scalable AWS systems.
 
 - certification: AWS Certified Data Analytics – Specialty
   organization: Amazon Web Services (AWS)
-  issued: May, 2022
-  expires: May, 2025
+  year: May, 2022 - May, 2025
   summary: Issued by Amazon Web Services, validates expertise in data collection, processing, and visualization using AWS analytics services.
 
 - certification: CKA: Certified Kubernetes Administrator
   organization: The Linux Foundation
-  issued: Apr, 2021
-  expires: Apr, 2024
+  year: Apr, 2021 - Apr, 2024
   summary: Issued by The Linux Foundation, certifies proficiency in Kubernetes cluster installation, configuration, and management.
 
 - certification: AWS Certified Solutions Architect – Professional
   organization: Amazon Web Services (AWS)
-  issued: Mar, 2021
-  expires: Mar, 2024
+  year: Mar, 2021 - Mar, 2024
   summary: Issued by Amazon Web Services, recognizes advanced architecture skills for complex, distributed AWS systems.
 
 - certification: Certified Kubernetes Application Developer
   organization: The Linux Foundation
-  issued: Jan, 2021
-  expires: Jan, 2024
+  year: Jan, 2021 - Jan, 2024
   summary: Issued by The Linux Foundation, confirms ability to design and build Kubernetes-native applications.
 
 - certification: AWS Certified Database – Specialty
   organization: Amazon Web Services (AWS)
-  issued: Jan, 2020
-  expires: Mar, 2023
+  year: Jan, 2020 - Mar, 2023
   summary: Issued by Amazon Web Services, covers advanced database engineering skills, including selection, migration, and performance tuning.
 
 - certification: Champion – Authorized Instructor
   organization: Amazon Web Services (AWS)
-  issued: Jan, 2021
-  expires: Feb, 2026
+  year: Jan, 2021
   summary: Issued by Amazon Web Services, recognizes elite instructor status for delivering multiple AWS official courses with high satisfaction scores.
 
 - certification: CCA Spark and Hadoop Developer
   organization: Cloudera
-  issued: Sep, 2020
-  expires: Sep, 2022
+  year: Sep, 2020 - Sep, 2022
   summary: Issued by Cloudera, confirms proficiency in Spark and Hadoop development, including ETL and data analysis.
 
 - certification: AWS Certified Big Data – Specialty
   organization: Amazon Web Services (AWS)
-  issued: Sep, 2018
-  expires: Sep, 2021
+  year: Sep, 2018 - Sep, 2021
   summary: Issued by Amazon Web Services, validates advanced skills in big data processing and analytics on AWS.
