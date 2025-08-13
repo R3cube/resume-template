@@ -142,17 +142,14 @@ jobs:
           name: ${{ needs.validate.outputs.file_name }}
           path: .
 
-      - name: Configure rclone (pin to folder + shared drive) and health check
-        shell: bash
+      - name: Configure rclone (Service Account pinned to folder)
+        if: env.GDRIVE_SA_JSON != '' && env.GDRIVE_FOLDER_ID != ''
         env:
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
-          GDRIVE_SHARED_DRIVE_ID: ${{ secrets.GDRIVE_SHARED_DRIVE_ID }}
         run: |
           set -euo pipefail
           echo "$GDRIVE_SA_JSON" > sa.json
-
-          # fresh remote to avoid stale config
           rclone config delete gdrive || true
           rclone config create gdrive drive \
             scope=drive \
@@ -160,12 +157,8 @@ jobs:
             root_folder_id="$GDRIVE_FOLDER_ID" \
             --non-interactive
 
-          # Shared Drive must be specified for Team Drives
-          rclone config update gdrive team_drive "$GDRIVE_SHARED_DRIVE_ID" --non-interactive
-
-          echo "== rclone lsd gdrive:/ (should not 404) =="
-          rclone lsd gdrive:/  # fail early if folder/drive not visible
-        # rclone Drive + Team Drive config. :contentReference[oaicite:4]{index=4}
+          # quick access test
+          rclone lsd gdrive:/ || { echo "❌ SA non sees the folder"; exit 1; }
 
       - name: Upload PDF to Google Drive
         shell: bash
