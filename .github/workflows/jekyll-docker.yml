@@ -1,4 +1,4 @@
-name: Jekyll site CI + PDF (multi-job, fail-early)
+name: Jekyll site CI + PDF (single job)
 
 on:
   push:
@@ -7,17 +7,15 @@ on:
     branches: ["employee/**"]
 
 jobs:
-  # --------------------- 1) INSTALL / VALIDATE (fail early) ---------------------
-  install:
-    name: Install & Validate
+  pipeline:
     runs-on: ubuntu-latest
-    outputs:
-      file_name: ${{ steps.meta.outputs.file_name }}
-      has_drive: ${{ steps.secretscheck.outputs.has_drive }}
+
     steps:
+      # ------------------ CHECKOUT ------------------
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ------------------ FAIL EARLY: nome PDF ------------------
       - name: Validate resume_name and compute file name
         id: meta
         shell: bash
@@ -38,6 +36,7 @@ jobs:
           echo "file_name=${SLUG_NAME}.pdf" >> "$GITHUB_OUTPUT"
           echo "✅ PDF verrà salvato come: ${SLUG_NAME}.pdf"
 
+      # ------------------ INSTALL (in cima) ------------------
       - name: Install wkhtmltopdf (patched Qt) & verify
         shell: bash
         run: |
@@ -47,7 +46,7 @@ jobs:
           wget -q https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb
           sudo apt install -y ./wkhtmltox_0.12.6.1-2.jammy_amd64.deb
           wkhtmltopdf --version || { echo "❌ wkhtmltopdf non funzionante"; exit 1; }
-          echo "✅ wkhtmltopdf ok"
+          echo "✅ wkhtmltopdf OK"
 
       - name: Install rclone & verify
         shell: bash
@@ -55,30 +54,9 @@ jobs:
           set -euo pipefail
           curl -fsSL https://rclone.org/install.sh | sudo bash
           rclone version || { echo "❌ rclone non funzionante"; exit 1; }
-          echo "✅ rclone ok"
+          echo "✅ rclone OK"
 
-      - name: Check Drive secrets presence (sets job output)
-        id: secretscheck
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [ -n "${{ secrets.GDRIVE_SA_JSON }}" ] && [ -n "${{ secrets.GDRIVE_FOLDER_ID }}" ]; then
-            echo "has_drive=true" >> "$GITHUB_OUTPUT"
-            echo "✅ Segreti Drive presenti"
-          else
-            echo "has_drive=false" >> "$GITHUB_OUTPUT"
-            echo "ℹ️  Segreti Drive assenti: lo step di upload verrà saltato"
-          fi
-
-  # --------------------- 2) BUILD (produce _site) ---------------------
-  build:
-    name: Build Jekyll (Docker)
-    runs-on: ubuntu-latest
-    needs: install
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      # ------------------ BUILD (Docker) ------------------
       - name: Build site in Docker (no server)
         shell: bash
         run: |
@@ -91,45 +69,13 @@ jobs:
             sh -lc "bundle install && bundle exec jekyll build --trace"
           test -f _site/index.html || (echo "❌ _site/index.html non trovato" && exit 1)
 
-      - name: Upload built site (_site)
-        uses: actions/upload-artifact@v4
-        with:
-          name: _site
-          path: _site
-
-  # --------------------- 3) GENERATE (wkhtmltopdf) ---------------------
-  generate:
-    name: Generate PDF
-    runs-on: ubuntu-latest
-    needs: [install, build]
-    outputs:
-      file_name: ${{ needs.install.outputs.file_name }}
-    steps:
-      - name: Download _site
-        uses: actions/download-artifact@v4
-        with:
-          name: _site
-          path: _site
-
-      - name: Verify wkhtmltopdf (reinstall if missing)
+      # ------------------ GENERATE PDF ------------------
+      - name: Generate PDF from local _site
         shell: bash
         run: |
           set -euo pipefail
-          if ! command -v wkhtmltopdf >/dev/null 2>&1; then
-            echo "wkhtmltopdf mancante in questa VM; reinstallo velocemente…"
-            sudo apt-get update
-            sudo apt-get install -y wget xfonts-75dpi fontconfig libxrender1
-            wget -q https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb
-            sudo apt install -y ./wkhtmltox_0.12.6.1-2.jammy_amd64.deb
-          fi
-          wkhtmltopdf --version
-
-      - name: Generate PDF
-        shell: bash
-        run: |
-          set -euo pipefail
-          FILE="${{ needs.install.outputs.file_name }}"
-          [ -n "$FILE" ] || { echo "❌ Nome PDF mancante (output install)"; exit 1; }
+          FILE="${{ steps.meta.outputs.file_name }}"
+          [ -n "$FILE" ] || { echo "❌ Nome PDF mancante (output meta)"; exit 1; }
           wkhtmltopdf --enable-local-file-access \
             --orientation Portrait --page-size A4 \
             --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
@@ -137,50 +83,36 @@ jobs:
             "file://$GITHUB_WORKSPACE/_site/index.html" "$FILE"
           ls -l "$FILE"
 
-      - name: Upload PDF artifact
+      # ------------------ ARTIFACT ------------------
+      - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ needs.install.outputs.file_name }}
-          path: ${{ needs.install.outputs.file_name }}
+          name: ${{ steps.meta.outputs.file_name }}
+          path: ${{ steps.meta.outputs.file_name }}
 
-  # --------------------- 4) UPLOAD (optional Google Drive via rclone) ---------------------
-  upload:
-    name: Upload to Google Drive (optional)
-    runs-on: ubuntu-latest
-    needs: [install, generate]
-    if: ${{ needs.install.outputs.has_drive == 'true' }}
-    steps:
-      - name: Download PDF
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ needs.install.outputs.file_name }}
-          path: .
-
-      - name: Verify rclone (reinstall if missing)
-        shell: bash
-        run: |
-          set -euo pipefail
-          if ! command -v rclone >/dev/null 2>&1; then
-            echo "rclone mancante in questa VM; reinstallo velocemente…"
-            curl -fsSL https://rclone.org/install.sh | sudo bash
-          fi
-          rclone version
-
+      # ------------------ (OPZIONALE) DRIVE UPLOAD ------------------
+      # Usa env per poter fare if: (secrets.* non è disponibile nell'if)
       - name: Configure rclone (Service Account pinned to folder)
+        if: env.GDRIVE_SA_JSON != '' && env.GDRIVE_FOLDER_ID != ''
+        env:
+          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
+          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
         shell: bash
         run: |
           set -euo pipefail
-          echo '${{ secrets.GDRIVE_SA_JSON }}' > sa.json
+          echo "$GDRIVE_SA_JSON" > sa.json
           rclone config create gdrive drive \
             scope=drive \
             service_account_file=sa.json \
-            root_folder_id='${{ secrets.GDRIVE_FOLDER_ID }}' \
+            root_folder_id="$GDRIVE_FOLDER_ID" \
             --non-interactive
-          # Se la cartella è in una Shared Drive:
-          # rclone config update gdrive team_drive '<SHARED_DRIVE_ID>' --non-interactive
 
       - name: Upload PDF to Google Drive
+        if: env.GDRIVE_SA_JSON != '' && env.GDRIVE_FOLDER_ID != ''
+        env:
+          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
+          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
         shell: bash
         run: |
           set -euo pipefail
-          rclone copy "${{ needs.install.outputs.file_name }}" gdrive: --progress
+          rclone copy "${{ steps.meta.outputs.file_name }}" gdrive: --progress
