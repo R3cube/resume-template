@@ -97,22 +97,26 @@ jobs:
         env:
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
-        shell: bash
+          GDRIVE_SHARED_DRIVE_ID: ${{ secrets.GDRIVE_SHARED_DRIVE_ID }}  # <— NEW
         run: |
           set -euo pipefail
           echo "$GDRIVE_SA_JSON" > sa.json
+          rclone config delete gdrive || true
           rclone config create gdrive drive \
             scope=drive \
             service_account_file=sa.json \
             root_folder_id="$GDRIVE_FOLDER_ID" \
             --non-interactive
+          # point to the Shared Drive (required in many cases)
+          rclone config update gdrive team_drive "$GDRIVE_SHARED_DRIVE_ID" --non-interactive
+
+          # fast check (fail early if not accessible)
+          rclone lsd gdrive:/ || { echo "❌ SA non vede la cartella (condividi/membership/ID)"; exit 1; }
 
       - name: Upload PDF to Google Drive
         if: env.GDRIVE_SA_JSON != '' && env.GDRIVE_FOLDER_ID != ''
         env:
-          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
-        shell: bash
         run: |
           set -euo pipefail
           rclone copy "${{ steps.meta.outputs.file_name }}" gdrive: --progress
