@@ -22,37 +22,23 @@ jobs:
           SLUG_NAME=$(echo "$RAW_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/_/g;s/_\+/_/g;s/^_//;s/_$//')
           echo "file_name=${SLUG_NAME}.pdf" >> $GITHUB_OUTPUT
 
-      # Start Jekyll inside the official Docker image and serve on port 4000
-      - name: Serve site via jekyll/jekyll
+      - name: Build site in Docker (no server)
         run: |
-          docker run -d --name jekyll \
-            -p 4000:4000 \
+          docker run --rm \
+            -e JEKYLL_UID=$(id -u) -e JEKYLL_GID=$(id -g) \
             -v "$PWD":/srv/jekyll \
+            -v "$PWD/vendor/bundle":/usr/local/bundle \
             jekyll/jekyll:4 \
-            sh -lc "bundle install && jekyll serve --host 0.0.0.0 --port 4000 --safe --trace"
-          # wait until the server responds
-          for i in {1..60}; do
-            curl -sSf http://127.0.0.1:4000/ >/dev/null && break
-            sleep 2
-          done
+            sh -lc "bundle install && bundle exec jekyll build --trace"
+          test -f _site/index.html
 
-      - name: Install wkhtmltopdf
+      - name: Generate PDF from local _site
         run: |
-          sudo apt-get update
-          sudo apt-get install -y wkhtmltopdf
-
-      - name: Generate PDF from localhost
-        run: |
-          SITE_URL="http://127.0.0.1:4000/?cache=$(date +%s)"
-          echo "Fetching from: $SITE_URL"
-          wkhtmltopdf \
-            --enable-local-file-access \
-            --viewport-size 2000x2000 \
-            --orientation Portrait \
-            --page-size A4 \
+          wkhtmltopdf --enable-local-file-access \
+            --orientation Portrait --page-size A4 \
             --margin-bottom 0 --margin-left 0 --margin-right 0 --margin-top 0 \
             --javascript-delay 2000 \
-            "$SITE_URL" "${{ steps.meta.outputs.file_name }}"
+            "file://$GITHUB_WORKSPACE/_site/index.html" "${{ steps.meta.outputs.file_name }}"
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
@@ -60,22 +46,24 @@ jobs:
           name: ${{ steps.meta.outputs.file_name }}
           path: ${{ steps.meta.outputs.file_name }}
 
-      - name: Stop container
-        if: always()
-        run: docker rm -f jekyll || true
 
-      # ---------- Google Drive Upload (optional) ----------
-      # - name: Install rclone
-      #   if: ${{ secrets.GDRIVE_SERVICE_ACCOUNT != '' }}
-      #   run: curl https://rclone.org/install.sh | sudo bash
-      #
-      # - name: Configure rclone for Google Drive
-      #   if: ${{ secrets.GDRIVE_SERVICE_ACCOUNT != '' }}
-      #   run: |
-      #     echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT }}" > sa.json
-      #     rclone config create gdrive drive scope=drive.file service_account_file=sa.json
-      #
-      # - name: Upload to Google Drive
-      #   if: ${{ secrets.GDRIVE_SERVICE_ACCOUNT != '' }}
-      #   run: |
-      #     rclone copy "${{ steps.meta.outputs.file_name }}" gdrive:"{YOUR_FOLDER_ID}" --drive-root-folder-id {YOUR_FOLDER_ID}
+#      - name: Install rclone
+#        run: |
+#          curl -fsSL https://rclone.org/install.sh | sudo bash
+#          rclone version
+#      - name: Configure rclone (Service Account)
+#        if: ${{ secrets.GDRIVE_SA_JSON != '' && secrets.GDRIVE_FOLDER_ID != '' }}
+#        run: |
+#          # Write SA credentials to a file
+#          echo '${{ secrets.GDRIVE_SA_JSON }}' > sa.json
+#
+#          rclone config create gdrive drive \
+#            scope=drive \
+#            service_account_file=sa.json \
+#            root_folder_id='${{ secrets.GDRIVE_FOLDER_ID }}' \
+#            --non-interactive
+#
+#      - name: Upload PDF to Google Drive
+#        if: ${{ secrets.GDRIVE_SA_JSON != '' && secrets.GDRIVE_FOLDER_ID != '' }}
+#        run: |
+#          rclone copy "${{ steps.meta.outputs.file_name }}" gdrive: --progress
