@@ -1,37 +1,12 @@
 # Skills
+# Organizational leadership
+- skill: Organizational leadership
+  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
 
-- skill: AWS
-  description: Expertise in designing, deploying, and managing AWS-based cloud infrastructure.
+# Communications strategy
+- skill: Communications strategy
+  description: Content and marketing strategy,
 
-- skill: Cloud Architecture
-  description: Skilled in building scalable, secure, and cost-effective cloud solutions.
-
-- skill: Networking
-  description: Proficient in configuring and optimizing network performance and security.
-
-- skill: Security
-  description: Experienced in implementing security best practices across cloud environments.
-
-- skill: Monitoring
-  description: Adept at monitoring and maintaining system performance and availability.
-
-- skill: Troubleshooting
-  description: Proven ability to diagnose and resolve complex cloud and infrastructure issues.
-
-- skill: Automation
-  description: Developed automated cloud deployment processes using Terraform and AWS CloudFormation.
-
-- skill: Scripting
-  description: Skilled in scripting for automation and system management.
-
-- skill: Linux
-  description: Proficient in Linux system administration and configuration.
-
-- skill: DevOps
-  description: Experienced in CI/CD pipelines and DevOps workflows.
-
-- skill: Python
-  description: Skilled in Python programming for automation and cloud tooling.
-
-- skill: Training
-  description: Designed and delivered cloud computing training programs for technical and non-technical audiences.
+# Digital content development and creation
+- skill: Digital content development and creation
+  description: Copy writing, graphic design, web design, front-end web development, print design

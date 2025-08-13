@@ -1,16 +1,16 @@
 # Projects
+# uncomment the urls if you wish to display them, and add your own URL
 
-- project: Cloud Migration & Deployment Automation
-  role: Lead Engineer
-  duration: 2018 &mdash; Present
-  description: Designed and implemented scalable, cost-effective cloud migration solutions using AWS technologies. Automated deployments with Terraform and AWS CloudFormation for multiple clients.
+# jazznotes.io
+- project: jazznotes.io
+  role: Founder & Primary Developer
+  duration: 2012 &mdash; Present
+  # url: "#"
+  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
 
-- project: Cloud Computing Training Programs
-  role: Instructor & Curriculum Developer
-  duration: 2018 &mdash; Present
-  description: Developed and delivered tailored training workshops on AWS cloud computing for businesses and organizations, covering both technical and non-technical audiences.
-
-- project: Multi-Client Cloud Infrastructure Management
-  role: Cloud Engineer
-  duration: 2017 &mdash; Present
-  description: Managed and maintained AWS-based cloud infrastructures for diverse clients, ensuring high availability, security, and optimized performance.
+# Springfield Community Outreach Group
+- project: Springfield Community Outreach Group
+  role: Co-Founder & Organizer
+  duration: 2007 &mdash; Present
+  # url: "#"
+  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
