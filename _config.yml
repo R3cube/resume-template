@@ -9,8 +9,8 @@ sass:
 
 # Resume settings
 resume_avatar:                  "true"
-resume_name:                    "Gianluigi Mucciolo"
-resume_title:                   "Cloud Innovation Lead & AWS Authorized Instructor"
+resume_name:                    "Gabriele M. Pipitò"
+resume_title:                   "Cloud Engineer"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           ""
