@@ -10,15 +10,15 @@ sass:
 
 # Resume settings
 resume_avatar:                  "true"
-resume_name:                    "Lisa M. Simpson"
-resume_title:                   "VP of Global Communications"
+resume_name:                    "Francesco Gallo"
+resume_title:                   "CV"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           ""
 
 # the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone:       ""
-resume_contact_address:         "Italy"
+resume_contact_address:         "Italia"
 
 resume_header_contact_info:     "Empowering Cloud Success Through Innovation"
 display_header_contact_info:    "true"
@@ -49,7 +49,7 @@ resume_social_links:
   resume_twitter_url:           ""
   resume_dribbble_url:          ""
   resume_facebook_url:          ""
-  resume_linkedin_url:          ""
+  resume_linkedin_url:          "https://it.linkedin.com/in/francesco-gallo-784998268"
   resume_instagram_url:         ""
   resume_website_url:           ""
   resume_medium_url:            ""
