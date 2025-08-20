@@ -1,19 +1,91 @@
 # Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
 
-# Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+# AWS Authorized Instructor
+- company: Amazon Web Services (AWS) — Italy
+  position: AWS Authorized Instructor
+  duration: Nov, 2024 — Present
+  summary: Deliver instructor led training on AWS fundamentals and advanced topics with a focus on serverless security and infrastructure as code. <ul class="resume-item-list"><li>Led hands on labs and guided learners through best practices</li><li>Emphasized automation and reliability patterns</li></ul>
 
+# Cloud Architect
+- company: Recube Srl — Rome, Italy
+  position: Cloud Architect
+  duration: Aug, 2024 — Present
+  summary: Architected secure and automated solutions on AWS aligning with business goals and compliance. <ul class="resume-item-list"><li>Ownership of cloud design reviews and implementation plans</li><li>Infrastructure as Code with CloudFormation Terraform and Ansible</li><li>Serverless patterns and resilient networking</li></ul>
 
-# Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+# Cloud Engineer / Service Delivery Manager
+- company: Recube Srl — Rome, Italy
+  position: Cloud Engineer / Service Delivery Manager
+  duration: Mar, 2024 — Aug, 2024
+  summary: Coordinated delivery across multiple engagements improving reliability and time to value. <ul class="resume-item-list"><li>Planned sprints and release activities</li><li>Introduced monitoring and incident response runbooks</li></ul>
+
+# Cloud Engineer
+- company: Corley Cloud Srl — Turin, Italy
+  position: Cloud Engineer
+  duration: Oct, 2023 — Mar, 2024
+  summary: Built and automated AWS environments focusing on networking compute and serverless workloads. <ul class="resume-item-list"><li>Implemented IaC pipelines</li><li>Hardened accounts and resources</li></ul>
+
+# AWS Cloud Engineer
+- company: Claranet Italia — Trento, Italy
+  position: AWS Cloud Engineer
+  duration: Jul, 2022 — May, 2023
+  summary: Delivered migration and modernization initiatives and supported disaster recovery designs. <ul class="resume-item-list"><li>Led small delivery teams</li><li>MAP activities and multi stack IaC CloudFormation Terraform Ansible</li></ul>
+
+# Cloud Support Engineer
+- company: Claranet Italia — Trento, Italy
+  position: Cloud Support Engineer
+  duration: Feb, 2021 — Jun, 2022
+  summary: Provided managed services for AWS customers covering provisioning change management and incident handling. <ul class="resume-item-list"><li>Daily operations with CloudFormation Terraform and core AWS services</li><li>Ticket management and customer communication</li></ul>
+
+# Intern
+- company: GPI S.p.A — Trento, Italy
+  position: Intern
+  duration: Jul, 2020 — Sep, 2020
+  summary: Automation and platform engineering activities. <ul class="resume-item-list"><li>Ansible and YAML scripting</li><li>Docker based workflows</li></ul>
+
+# Intern
+- company: STORViX — Lund, Sweden
+  position: Intern
+  duration: Nov, 2019 — Dec, 2019
+  summary: Built automation assets and images in a storage startup environment. <ul class="resume-item-list"><li>Ansible Vagrant and Packer</li><li>Docker and Docker Swarm virtual machines source control on Bitbucket</li></ul>
+
+# Intern
+- company: GPI S.p.A — Trento, Italy
+  position: Intern
+  duration: May, 2019 — May, 2019
+  summary: Infrastructure scripting and virtualization exercises. <ul class="resume-item-list"><li>YAML and Ansible</li><li>VirtualBox and VMware administration and Azure usage</li></ul>
+
+# Print and Binding Operator
+- company: ELCOGRAF S.p.A — Cles, Italy
+  position: Print and Binding Operator
+  duration: Sep, 2016 — Sep, 2018
+  summary: Operated and configured industrial printing and binding machinery.
+
+# Print and Binding Operator
+- company: ELCOGRAF S.p.A — Cles, Italy
+  position: Print and Binding Operator
+  duration: Jun, 2016 — Aug, 2016
+  summary: Seasonal role supporting press setup and finishing.
+
+# Waiter
+- company: A.C.A S.r.l Hotel Ravelli — Mezzana, Italy
+  position: Waiter
+  duration: Jan, 2016 — Apr, 2016
+  summary: Customer service and dining room operations.
+
+# Waiter
+- company: A.C.A S.r.l Hotel Ravelli — Mezzana, Italy
+  position: Waiter
+  duration: Jul, 2015 — Sep, 2015
+  summary: Seasonal hospitality role.
+
+# Waiter
+- company: S.R.L Sicher Bruno & CO — Predaia Tavon, Italy
+  position: Waiter
+  duration: Jul, 2013 — Sep, 2013
+  summary: Seasonal hospitality role.
+
+# Farm Worker
+- company: Brentari Alberto — Smarano, Italy
+  position: Farm Worker
+  duration: Jul, 2012 — Sep, 2012
+  summary: Seasonal agricultural work.

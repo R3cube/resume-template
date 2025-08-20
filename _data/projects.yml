@@ -1,16 +1,23 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
-  # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+# Workflow automation with Ansible and Docker
+- project: Workflow automation with Ansible and Docker
+  role: Thesis project author
+  duration: 2019 — 2021
+  # url:
+  description: Designed and implemented automated build and deployment workflows using Ansible playbooks and Docker with Dockerfile and Compose to create repeatable environments and reduce setup time.
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
-  # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+# Plan and Define Cloud Business Continuity — hands on module
+- project: Plan and Define Cloud Business Continuity — hands on module
+  role: Instructor and content author
+  duration: 2024
+  # url:
+  description: Created and delivered an eight hour module split between theory and practice with original AWS lab exercises covering business continuity high availability design and disaster recovery.
+
+# DevOps and IaC introduction — corporate training
+- project: DevOps and IaC introduction — corporate training
+  role: Instructor and lab designer
+  duration: 2024 — 2025
+  # url:
+  description: Prepared and taught sessions on DevOps fundamentals and infrastructure as code with a focus on automation using Terraform CloudFormation and Ansible supported by practical labs.

@@ -1,12 +1,29 @@
 # Skills
-# Organizational leadership
-- skill: Organizational leadership
-  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
 
-# Communications strategy
-- skill: Communications strategy
-  description: Content and marketing strategy,
+# Cloud architecture on AWS
+- skill: Cloud architecture on AWS
+  description: Compute networking and serverless workloads with resilient design and cost aware choices
 
-# Digital content development and creation
-- skill: Digital content development and creation
-  description: Copy writing, graphic design, web design, front-end web development, print design
+# Infrastructure as Code and automation
+- skill: Infrastructure as Code and automation
+  description: CloudFormation Terraform and Ansible with YAML driven workflows and repeatable deployments
+
+# Containers and platform engineering
+- skill: Containers and platform engineering
+  description: Docker Docker Compose and Docker Swarm image building with Packer and environment provisioning with Vagrant
+
+# Security reliability and operations
+- skill: Security reliability and operations
+  description: Account hardening monitoring and incident response runbooks backup and disaster recovery planning
+
+# CI and version control
+- skill: CI and version control
+  description: Git based workflows automated provisioning and change management in team environments
+
+# Training and knowledge sharing
+- skill: Training and knowledge sharing
+  description: Instructor led delivery of AWS courses hands on labs and mentoring of engineers and clients
+
+# Networking fundamentals
+- skill: Networking fundamentals
+  description: VPC design routing load balancing and connectivity patterns on AWS

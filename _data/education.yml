@@ -1,13 +1,15 @@
 # Degree
-- degree: Bachelor of Arts, Human Rights
-  uni: Yale University
-  year: 2004 &mdash; 2008
-  awards:
-    - award: Summa Cumme Laude graduate
-  summary: If you had any meaningful roles at college, feel free to write about them here
+- degree: Ingegneria Informatica, delle Comunicazioni ed Elettronica
+  uni: Università di Trento
+  year: Present
+  summary: Currently enrolled in the Computer Communications and Electronic Engineering program at the University of Trento.
 
-- degree: High School Diploma
-  uni: Springfield High School
-  year: 2004
-  award: Most likely to succeed
-  summary: You can choose to have either a single or multiple awards
+- degree: Higher Technical Education Network Infrastructure Virtualization and Cloud Computing
+  uni: ITT Marconi Rovereto
+  year: Jan 2019 — Mar 2021
+  summary: Two year post secondary program with thesis on workflow automation using Ansible and Docker.
+
+- degree: Technical Diploma Informatics
+  uni: ITT Marconi Rovereto
+  year: Sep 2012 — Jun 2018
+  summary: Studies included programming networking information technology and operating systems with a thesis titled From the first computer to the birth of the internet.

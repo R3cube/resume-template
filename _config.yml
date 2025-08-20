@@ -1,6 +1,6 @@
 # Site settings
-title: "Jekyll Resume Template"
-description: "A resume template for Jekyll and GitHub Pages sites."
+title: "Mario Gabriele Ossanna — Resume"
+description: "Cloud Architect & AWS Authorized Instructor focused on secure automation, AWS serverless, and IaC." 
 
 # Build settings
 markdown: kramdown
@@ -8,22 +8,23 @@ sass:
   sass_dir: _sass
   style: compressed
 
-# Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Mario Gabriele Ossanna"
-resume_title:                   "VP of Global Communications"
+resume_title:                   "Cloud Architect"   # current employee role at Recube
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           ""
 
 # the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone:       ""
-resume_contact_address:         "Italy"
+resume_contact_address:         ""
 
-resume_header_contact_info:     "Empowering Cloud Success Through Innovation"
+# short motto aligned to mission (Cloud/DevOps, reliability)
+resume_header_contact_info:     "Automate. Secure. Deliver."
 display_header_contact_info:    "true"
 
-resume_header_intro: "<p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but keep it brief and concise</p>"
+# executive summary (condensed from the PRESENTAZIONE section)
+resume_header_intro: "<p>Curious, proactive cloud professional with a strong bias for continuous learning and knowledge sharing as an instructor. Experienced in Ansible, CloudFormation, Docker, and core AWS (compute, networking, serverless). Known for teamwork, clear client communication, and leading small teams to deliver resilient solutions on time and to high standards.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
