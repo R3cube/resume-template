@@ -1,12 +1,20 @@
 # Skills
-# Organizational leadership
-- skill: Organizational leadership
-  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
+# Software Engineering
+- skill: Software Engineering
+  description: Java, Python, C++, C, JavaScript; backend with Spring Boot; web with Angular/React; Android with Jetpack Compose.
 
-# Communications strategy
-- skill: Communications strategy
-  description: Content and marketing strategy,
+# Cloud & AI
+- skill: Cloud & AI
+  description: AWS and Google Cloud; serverless architectures; Generative AI and RAG for chatbots and applications.
 
-# Digital content development and creation
-- skill: Digital content development and creation
-  description: Copy writing, graphic design, web design, front-end web development, print design
+# Databases
+- skill: Databases
+  description: PostgreSQL, MySQL, MongoDB, DuckDB, SQLite.
+
+# Tools & Technologies
+- skill: Tools & Technologies
+  description: Git, Docker, Postman, Wireshark.
+
+# Teaching & Mentoring
+- skill: Teaching & Mentoring (Computer Science)
+  description: 700+ hours of 1:1 tutoring for 50+ students in programming, algorithms, and core CS subjects.

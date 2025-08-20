@@ -1,10 +1,25 @@
 # Recognitions
-- award: Outstanding Achievement
-  organization: Springfield Young Professionals
-  year: 2010, 2014
-  summary: Awarded the Outstanding Achievement award for contributions made to the community and professional accomplishments.
+- award: ITACPC Competition — Top 28 (Italy)
+  organization: Italian Collegiate Programming Contest (ITACPC)
+  year: 2023
+  summary: Placed in the Top 28 nationwide in the Italian Collegiate Programming Contest.
 
-- award: Most Likely To Succeed
-  organization: Springfield High School
-  year: 2004
-  summary: Voted Most Likely To Succeed by a panel of my high school peers.
+- award: AWS Certified Cloud Practitioner
+  organization: Amazon Web Services (AWS)
+  year: 2025
+  summary: Foundational certification validating cloud fluency and core AWS concepts.
+
+- award: AWS Certified AI Practitioner
+  organization: Amazon Web Services (AWS)
+  year: 2025
+  summary: Certification covering AI/ML fundamentals with an emphasis on Generative AI.
+
+- award: PhD Course Certificate — “Advanced Methods, Tools, and Applications for Artificial Intelligence: Modeling and Solving in Answer Set Programming”
+  organization: University of Calabria
+  year: 2024
+  summary: Completed a doctoral-level course focused on Answer Set Programming and advanced AI methodologies.
+
+- award: Graduated 110/110 cum laude
+  organization: University of Calabria
+  year: 2024
+  summary: Highest honors in B.Sc. in Computer Science.

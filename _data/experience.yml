@@ -1,19 +1,18 @@
 # Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+# Cloud AI Engineer
+- company: R3cube
+  position: Cloud AI Engineer
+  duration: Nov, 2024 &mdash; Present
+  summary: Delivering cloud-native AI features with a focus on secure, serverless architectures and practical GenAI/RAG use cases. <ul class="resume-item-list"><li>Design and implementation of serverless backends on AWS</li><li>Applied GenAI/RAG patterns to real-world products</li><li>Collaborated across teams to ship reliable solutions</li></ul>
 
-# Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+# Intern (Cloud/AI)
+- company: R3cube
+  position: Intern (Cloud/AI)
+  duration: Jan, 2024 &mdash; Jun, 2024
+  summary: Designed and built a Discord community-manager chatbot end-to-end using AWS serverless, introducing GenAI/RAG functionality. <ul class="resume-item-list"><li>Owned initial architecture and feature implementation</li><li>Integrated retrieval-augmented generation for smarter responses</li><li>Delivered from prototype to a functional MVP</li></ul>
 
-
-# Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+# Private Tutor (Computer Science)
+- company: SuperProf
+  position: Private Tutor (Computer Science)
+  duration: Mar, 2023 &mdash; Present
+  summary: Provided one-to-one tutoring in computer science subjects with strong outcomes and student satisfaction. <ul class="resume-item-list"><li>700+ tutoring hours; 50+ students taught</li><li>High ratings and strong demand on the platform</li><li>Focus on programming, algorithms, and software engineering fundamentals</li></ul>
