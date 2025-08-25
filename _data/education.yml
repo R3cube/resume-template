@@ -1,13 +1,25 @@
 # Degree
-- degree: Bachelor of Arts, Human Rights
-  uni: Yale University
-  year: 2004 &mdash; 2008
-  awards:
-    - award: Summa Cumme Laude graduate
-  summary: If you had any meaningful roles at college, feel free to write about them here
+- degree: AWS Solution Architect - Associate
+  uni: Amazon Web Services
+  year: October 2024
+  summary: Certification validating knowledge in designing and deploying scalable, reliable, and secure systems on AWS.
 
-- degree: High School Diploma
-  uni: Springfield High School
-  year: 2004
-  award: Most likely to succeed
-  summary: You can choose to have either a single or multiple awards
+- degree: AWS CloudQuest - Cloud Practitioner
+  uni: Amazon Web Services
+  year: April 2024
+  summary: Regional course focused on Cloud Computing, application development, and AWS infrastructure.
+
+- degree: AWS RE/Start - Cloud Practitioner
+  uni: EDGEMONY
+  year: 2023 — 2024
+  summary: Regional course focused on Cloud Computing, application development, and AWS infrastructure.
+
+- degree: Computer Expert
+  uni: Technical Industrial Institute A. Volta, Palermo (Pa)
+  year: 2020
+  summary: Study program focused on programming, networks, cybersecurity, telecommunications, and databases.
+
+- degree: Cisco Networking Academy
+  uni: Technical Industrial Institute A. Volta, Palermo (Pa)
+  year: 2019
+  summary: Introduction to cybersecurity and computer networks.

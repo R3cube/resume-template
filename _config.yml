@@ -11,7 +11,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Luca Martorana"
-resume_title:                   "VP of Global Communications"
+resume_title:                   "Cloud Engineer"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           ""
@@ -20,10 +20,10 @@ resume_contact_email:           ""
 resume_contact_telephone:       ""
 resume_contact_address:         "Italy"
 
-resume_header_contact_info:     "Empowering Cloud Success Through Innovation"
+resume_header_contact_info:     "Empowering cloud solutions with passion for technology and continuous learning."
 display_header_contact_info:    "true"
 
-resume_header_intro: "<p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but keep it brief and concise</p>"
+resume_header_intro: "<p>I am a passionate Cloud Engineer from Italy, with a strong background in IT and continuous learning. I completed my studies at the Alessandro Volta Industrial Institute in Palermo, specializing in technology and computer systems. Experienced in both software and hardware repairs, I am a tech enthusiast who constantly seeks new knowledge in the IT world. I actively follow the latest technology trends and deepen my understanding of programming languages beyond academic studies.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
@@ -35,11 +35,11 @@ resume_looking_for_work:        "no"
 # comment out to hide
 resume_section_experience:      true
 resume_section_education:       true
-resume_section_projects:        true
+resume_section_projects:        false
 resume_section_skills:          true
-resume_section_recognition:     true
-resume_section_links:           true
-resume_section_associations:    true
+resume_section_recognition:     false
+resume_section_links:           false
+resume_section_associations:    false
 resume_section_interests:       true
 
 # Resume social links

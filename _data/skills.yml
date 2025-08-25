@@ -1,12 +1,37 @@
 # Skills
-# Organizational leadership
-- skill: Organizational leadership
-  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
+# Teamwork
+- skill: Teamwork
+  description: I have developed strong teamwork skills through my experiences in various group projects and collaborative environments
 
-# Communications strategy
-- skill: Communications strategy
-  description: Content and marketing strategy,
+# Problem Solving
+- skill: Problem Solving
+  description: Strong analytical and problem-solving skills, with the ability to troubleshoot complex technical issues.
 
-# Digital content development and creation
-- skill: Digital content development and creation
-  description: Copy writing, graphic design, web design, front-end web development, print design
+# Networking
+- skill: Networking 
+  description: Thanks to my studies and my experiences, I have acquired solid knowledge in computer networks.
+
+# Virtualization & Cloud Computing
+- skill: Virtualization & Cloud Computing
+  description: Experience with virtualization technologies (e.g., VMware, Hyper-V) and cloud platforms (AWS).
+
+# AWS Cloud Services
+- skill: AWS Cloud Services
+  description: Proficient in various AWS services, including EC2, S3, RDS, Lambda, and VPC.
+
+# Scripting & Automation
+- skill: Scripting & Automation
+  description: Ability to write scripts in languages such as Python, Bash, PowerShell, Terraform and Cloudformation to automate tasks and improve efficiency.
+
+# Customer interaction
+- skill: Customer interaction
+  description: Experience in customer-facing roles, providing technical support and solutions to clients.
+
+# Programming
+- skill: Programming
+  description: Basic and Advanced knowledge of programming languages such as Python, PHP, SQL, Cloudformation, Terraform, C/++, C#, Java, JavaScript, and HTML/CSS.
+
+# English
+- skill: English (Advanced B2)
+  description: Proficient in English, both written and spoken, with the ability to communicate technical concepts effectively.
+
