@@ -1,11 +1,11 @@
 # Associations
 
-- organization: AWS Community Builder
-  role: Member & Content Contributor
+- organization: Cloud Training Program (AWS)
+  role: Participant
   year: 2024
-  summary: Actively participates in the AWS Community Builder program, contributing technical content on AWS, AI, and Big Data, such as the innovative PartyRock project that applies the SCAMPER method to foster creativity.
+  summary: Completed AWS Cloud Quest labs and foundational cloud learning paths focused on core services, security, and cost awareness.
 
-- organization: AWS Certification Subject Matter Expert (SME)
-  role: Workshop Contributor
-  date: November 2023
-  summary: Selected as an SME in the AWS Certification program, collaborating in workshops with AWS Certification Technical Architects and other experts to design and review questions for the AI Cloud Practitioner and AWS Machine Learning Associate certifications.
+- organization: Cisco Networking Academy
+  role: Learner
+  date: 2021
+  summary: Studied core networking through CCNA courses (Introduction to Networks; Switching, Routing, and Wireless Essentials).

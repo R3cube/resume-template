@@ -1,36 +1,58 @@
 # Degree
-- degree: Professional Licensing Examination for Computer Engineer
-  uni: Ordine degli Ingegneri di Salerno
-  year: 2023
+- degree: Diploma in Information Technology and Telecommunications
+  uni: I.I.S.S. Alessandro Volta (Palermo)
+  year: 2015 — 2020
+  awards:
+    - award: Final grade 80/100
+  summary: >
+    Technical diploma with specialization in computer science and telecommunications. 
+    Covered programming, networking, systems, and hardware maintenance with practical labs.
+
+- degree: Cloud Practitioner FOUNDATIONAL (Training Program)
+  uni: Edgemony
+  year: Dec, 2023 — Mar, 2024
   awards: []
   summary: >
-    Passed the professional licensing examination for Computer Engineer (Section A, Sector C – Computer Science), obtaining registration in the professional register with full technical responsibility.
+    Completed intensive training program on AWS fundamentals including compute, storage, IAM, networking, and cloud best practices.
 
-- degree: Master’s Degree (MSc), Computer Engineering
-  uni: Università degli Studi di Salerno &mdash; Technische Universität Wien
-  year: 2015 — 2017
-  awards:
-    - award: 110L/110 with honors
-  summary: >
-    Advanced training in software engineering, embedded systems, robotics, and artificial intelligence. 
-    Core courses: Distributed Programming, Control System Design, Network Security, and Computer Vision. 
-    Excellent academic performance, with distinction in AI and Signal Processing. Thesis conducted through the Erasmus+ program.
-
-- degree: Erasmus+ Exchange Program & Research Thesis (Master’s)
-  uni: Technische Universität Wien
-  year: Sep 2016 — Dec 2016
+- degree: CCNA — Switching, Routing, and Wireless Essentials (course)
+  uni: Cisco Networking Academy
+  year: 2021
   awards: []
   summary: >
-    Visiting researcher at the Pattern Recognition and Image Processing Group under the supervision of Prof. Walter Kropatsch. 
-    Thesis on analysis and calibration of mirrored multi-view systems, with focus on geometric modeling and visual inference techniques. 
-    Attended advanced Computer Vision courses and participated in research on visual structured representation.
+    Routing and switching concepts, VLANs, STP, WLANs, and basic security and automation topics.
 
-- degree: Bachelor’s Degree (BSc), Computer Engineering
-  uni: Università degli Studi di Salerno
-  year: 2010 — 2015
-  awards:
-    - award: 100/110
+- degree: CCNA — Introduction to Networks (course)
+  uni: Cisco Networking Academy
+  year: 2021
+  awards: []
   summary: >
-    Solid foundation in mathematics, programming, electronics, telecommunications, and control. 
-    Program included laboratory activities and internships, with skills in web technologies, databases, OOP, digital circuits, and signal theory. 
-    Thesis on an automated tool for multimedia sentiment analysis.
+    Network fundamentals including TCP/IP, Ethernet, addressing, subnetting, and device configuration.
+
+- degree: AWS Cloud Practitioner Foundational (learning path)
+  uni: AWS Skill Builder
+  year: 2024
+  awards: []
+  summary: >
+    AWS core services, shared responsibility, security, pricing, support plans, and architectural best practices.
+
+- degree: AWS Cloud Quest — Cloud Practitioner (labs)
+  uni: AWS
+  year: 2024
+  awards: []
+  summary: >
+    Gamified, scenario-based labs covering account setup, IAM, networking basics, storage, compute, and monitoring.
+
+- degree: Introduction to Cybersecurity (certificate of completion)
+  uni: Cisco Networking Academy
+  year: 2019
+  awards: []
+  summary: >
+    Threat landscape, basic security principles, and best practices for users and administrators.
+
+- degree: Comunicazione Online (merit certificate)
+  uni: Comunico On-Line
+  year: 2014
+  awards: []
+  summary: >
+    Fundamentals of effective online communication and presentation.

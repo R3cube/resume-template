@@ -2,28 +2,28 @@
 
 # Cloud Architecture & Engineering
 - skill: Cloud Architecture & Engineering
-  description: Design and deployment of secure, scalable, and cost-optimized AWS solutions, including multi-account architectures, serverless systems, Kubernetes (K8s) clusters, and containerized workloads with Docker.
+  description: AWS fundamentals across compute, storage, IAM, and networking; hands-on with Console and CLI for basic deployments and secure setup.
 
 # DevOps, Automation & Infrastructure as Code
 - skill: DevOps, Automation & Infrastructure as Code
-  description: Proficient in AWS CloudFormation, Terraform, Ansible, Jenkins, and AWS native CI/CD tools; implementing automated provisioning, configuration management, and continuous delivery pipelines.
+  description: Introductory experience with scripting and automation; comfortable with AWS CLI and shell to provision and operate small environments.
 
 # Data Engineering & Analytics
 - skill: Data Engineering & Analytics
-  description: Expertise in ETL workflows, AWS Kinesis, Redshift, Athena, and big data platforms (Hadoop, Spark); experienced in building real-time and historical data processing systems, data lakes, and analytics pipelines.
+  description: Working knowledge of AWS data services from foundational study; querying and storing data with S3/Athena basics.
 
 # Artificial Intelligence & Machine Learning
 - skill: Artificial Intelligence & Machine Learning
-  description: Applied ML/AI solutions using SageMaker, MXNet, and deep learning frameworks; experienced in recommendation systems, computer vision, and generative AI for real-world applications.
+  description: Interest in applying AI concepts to cloud workloads; self-study of practical use cases and services.
 
 # Programming & Software Engineering
 - skill: Programming & Software Engineering
-  description: Skilled in Python, Go, Java, and microservices architecture; applying software design patterns and best practices for maintainable, scalable, and high-performance systems.
+  description: HTML, CSS, PHP, XML, Python, JavaScript, Bash, Java, C/C++; SQL and MySQL for CRUD workloads and simple applications.
 
 # Systems Operations & Management
 - skill: Systems Operations & Management
-  description: Hands-on with AWS Systems Manager, AWS CLI, Linux administration, and troubleshooting high-availability systems in mission-critical contexts.
+  description: Linux basics, troubleshooting, and user support; AWS Systems Manager familiarity; monitoring with CloudWatch and CloudTrail.
 
 # Education & Technical Training
 - skill: Education & Technical Training
-  description: AWS Authorized Instructor (Champion Level) delivering official AWS courses, creating project-based learning experiences, and mentoring professionals in cloud, DevOps, and AI topics.
+  description: Continuous self-learning through AWS and Cisco coursework; practice-oriented approach with labs and small projects.
