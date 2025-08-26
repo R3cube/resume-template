@@ -1,13 +1,14 @@
 # Jobs
-# Cloud Engineer & AWS Trainer
 - company: Recube
   position: Cloud Engineer & AWS Trainer
-  duration: Oct, 2023 &mdash; Present
-  summary: Responsible for the design and management of AWS infrastructures, automation of CI/CD pipelines, and delivery of professional AWS training programs. Also lead content creation and technical webinars to drive audience engagement and brand awareness.
-  <ul class="resume-item-list">
-    <li>Designed and managed scalable AWS infrastructures (EC2, S3, RDS, Lambda) with focus on high availability and cost-efficiency.</li>
-    <li>Implemented CI/CD pipelines (GitHub Actions, AWS CodePipeline) reducing deployment times by 30%.</li>
-    <li>Trained and tutored over 120 professionals in internal and external AWS bootcamps.</li>
-    <li>Created content for online events, thematic webinars, and social campaigns dedicated to AWS cloud.</li>
-    <li>Spoke at technical webinars simplifying complex concepts for broader audiences.</li>
-  </ul>
+  duration: Oct, 2023 — Present
+  summary: |
+    Responsible for the design and management of AWS infrastructures, automation of CI/CD pipelines, 
+    and delivery of professional AWS training programs. Also lead content creation and technical webinars 
+    to drive audience engagement and brand awareness.
+  achievements:
+    - Designed and managed scalable AWS infrastructures (EC2, S3, RDS, Lambda) with focus on high availability and cost-efficiency.
+    - Implemented CI/CD pipelines (GitHub Actions, AWS CodePipeline) reducing deployment times by 30%.
+    - Trained and tutored over 120 professionals in internal and external AWS bootcamps.
+    - Created content for online events, thematic webinars, and social campaigns dedicated to AWS cloud.
+    - Spoke at technical webinars simplifying complex concepts for broader audiences.
