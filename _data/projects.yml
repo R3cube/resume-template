@@ -1,16 +1,21 @@
 # Projects
-# uncomment the urls if you wish to display them, and add your own URL
-
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
+# AWS Bootcamps & Training
+- project: AWS Bootcamps & Training
+  role: Trainer & Content Lead
+  duration: 2023 &mdash; Present
   # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+  description: Designed and delivered AWS bootcamps (internal and external) with over 120 professionals trained. Developed structured learning paths and simplified complex AWS/DevOps concepts for wider audiences.
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
+# Webinars & Digital Campaigns on AWS
+- project: Webinars & Digital Campaigns on AWS
+  role: Content Lead & Speaker
+  duration: 2023 &mdash; Present
   # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+  description: Coordinated and delivered thematic webinars, technical talks, and online campaigns focused on AWS services. Increased audience engagement and lead generation through educational and marketing initiatives.
+
+# CI/CD Pipeline Optimization
+- project: CI/CD Pipeline Optimization
+  role: Cloud Engineer
+  duration: 2023 &mdash; Present
+  # url: "#"
+  description: Implemented CI/CD pipelines using GitHub Actions and AWS CodePipeline, reducing deployment times by 30% and improving release efficiency for production workloads.
