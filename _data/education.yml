@@ -1,13 +1,21 @@
 # Degree
-- degree: Bachelor of Arts, Human Rights
-  uni: Yale University
-  year: 2004 &mdash; 2008
+- degree: Bachelor's Degree in Economic Sciences (Economics)
+  uni: eCampus University
+  year: Feb 2025
   awards:
-    - award: Summa Cumme Laude graduate
-  summary: If you had any meaningful roles at college, feel free to write about them here
+    - award: Thesis on "Statistic Analysis on Cloud Computing"
+  summary: Focused on economics applied to digital transformation and statistical analysis in cloud computing.  
 
-- degree: High School Diploma
-  uni: Springfield High School
-  year: 2004
-  award: Most likely to succeed
-  summary: You can choose to have either a single or multiple awards
+- degree: DevOps Academy
+  uni: Edgemony (in collaboration with ConTe.it – Admiral Group and Recube)
+  year: Jul 2023
+  awards:
+    - award: Completion of intensive course on AWS cloud architecture, Docker, Kubernetes, IaC and DevOps practices
+  summary: Gained hands-on experience in designing scalable infrastructures, container orchestration, and automation of cloud deployments.  
+
+- degree: Masterclass in Data Science
+  uni: Data Science Academy Italia (Neural Academy)
+  year: 2020 – 2021
+  awards:
+    - award: Advanced training program in Python, ML, data analysis, and AI algorithms
+  summary: Strengthened expertise in applying statistical methods, machine learning models, and artificial intelligence to real-world data.  
