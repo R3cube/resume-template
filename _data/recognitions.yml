@@ -4,12 +4,29 @@
   year: 2024
   summary: Achieved authorization to deliver official AWS training with focus on serverless security and infrastructure as code
 
-- award: Elected Municipal Council Member
-  organization: Comune di Sfruz
-  year: 2016, 2020
-  summary: Elected to public office serving as youth policies delegate and representative in the valley community council
+- award: AWS Certified Solutions Architect - Associate
+  organization: Amazon Web Services
+  year: 2024
+  summary: Validated expertise in designing and deploying scalable, highly available, and fault-tolerant systems on AWS
 
 - award: Elected Delegate
   organization: Consiglio BIM dell'Adige
   year: 2025
   summary: Elected delegate contributing to intermunicipal governance and coordination of shared resources
+
+- award: CCNA Routing and Switching (Introduction to Network)
+  organization: Cisco
+  year: 2019
+  summary: Gained foundational knowledge in networking concepts, IP addressing, and network device configuration
+
+- award: Certification IT Essentials By Cisco Networking Academy
+  organization: Cisco
+  year: 2018
+  summary: Completed comprehensive training in computer hardware and software, networking, and security fundamentals
+
+- award: Elected Municipal Council Member
+  organization: Comune di Sfruz
+  year: 2016, 2020
+  summary: Elected to public office serving as youth policies delegate and representative in the valley community council
+
+
