@@ -1,3 +1,34 @@
+- project: SEO-Driven Product Content Automation Platform
+  role: System Architect & Technical Lead
+  duration: Sep, 2024 — Jun, 2025
+  description: >
+    Designed and delivered a scalable platform to automate and optimize e-commerce product listings (bullet points, descriptions, search terms).
+    Combined AI-driven workflows with human feedback to boost SEO performance, reduce manual effort, and accelerate time-to-market.
+    <ul class="resume-item-list">
+      <li>Led system architecture, cloud infrastructure deployment, and integration of content optimization tools</li>
+      <li>Built a cloud-native data backbone (Amazon S3) with caching and auditing, reducing payload size and token usage by 80%</li>
+      <li>Implemented a standardized orchestration protocol (MCP) for consistent, traceable optimization and evaluation</li>
+      <li>Developed a content optimization engine with structured scoring prompts, cutting token costs by 30%</li>
+      <li>Designed a serverless orchestration layer (AWS Lambda, API Gateway, Aurora Serverless) with auto-scaling to zero, lowering operational costs by 90%</li>
+      <li>Delivered an SEO review interface (Amazon AppRunner) enabling real-time validation, approvals, and human-in-the-loop quality control</li>
+    </ul>
+    <p><strong>Results:</strong> Reduced content production time from days to minutes, delivered an extensible SEO-ready platform, and achieved significant cost savings while enhancing search visibility.</p>
+    <p><strong>Skills & Technologies:</strong> Generative AI for Marketing, Prompt Engineering, Model Context Protocol (MCP), Token Optimization for LLMs, Serverless AI Orchestration</p>
+
+- project: Build a Real-time Layer for Streaming Data
+  role: LiveProject Author (Associated with Manning Publications)
+  duration: Apr, 2024 — May, 2025
+  description: >
+    Designed, wrote, and implemented a hands-on curriculum to guide learners in building real-time, cloud-native streaming data pipelines for Nextstellar Corp, a streaming media company.
+    <ul class="resume-item-list">
+      <li>Introduced learners to AWS services: Kinesis, Glue, S3, OpenSearch, Bedrock</li>
+      <li>Taught event-driven architectures and streaming data concepts</li>
+      <li>Guided students through six projects: ingestion, data lake creation, analytics, and generative AI for data exploration</li>
+      <li>Emphasized real-world application of Python, SQL, Apache Flink, and orchestration tools</li>
+    </ul>
+    <p><strong>Results:</strong> Project went live with highly positive feedback, praised for its practical application and in-demand AWS data management skills.</p>
+    <p><strong>Skills & Technologies:</strong> CloudFormation, Amazon Kinesis, AWS, Data Architecture, Streaming, Real-time Processing, Python</p>
+
 - project: AI-Powered Virtual Support Assistant for Scalable L2 Ticket Automation in E-Learning
   role: Technical Lead (Associated with Recube)
   duration: Jul, 2024 — Dec, 2024
@@ -18,3 +49,122 @@
     </ul>
     Followed a "working backwards" press-release approach, envisioning the ideal user experience first to guide development and prioritize outcomes.</p>
     <p><strong>Skills & Technologies:</strong> Generative AI tools, Amazon Bedrock, Data Architecture</p>
+
+- project: A Storage Layer for Big Data in AWS
+  role: LiveProject Author (Associated with Manning Publications)
+  duration: Feb, 2023 — Feb, 2024
+  description: >
+    Created a hands-on project series to help Nextstellar Corp migrate from on-premises analytics to AWS Data Lake solutions.
+    <ul class="resume-item-list">
+      <li>Designed six projects covering file migration, data integration with AWS Glue, serverless transformation, data quality checks, and ETL pipeline orchestration</li>
+      <li>Guided students in using PySpark, AWS Glue, and Step Functions for transformation and validation</li>
+      <li>Developed curriculum enabling practical, large-scale data management skills on AWS</li>
+    </ul>
+    <p><strong>Results:</strong> Successfully live with highly positive learner feedback for real-world depth and practicality.</p>
+    <p><strong>Skills & Technologies:</strong> CloudFormation, SQL, AWS, Data Architecture, Big Data, Python</p>
+
+- project: Building a Comprehensive Data Platform on AWS (Lambda Architecture)
+  role: Technical Lead (Associated with Claranet Italia)
+  duration: Apr, 2021 — Dec, 2022
+  description: >
+    Migrated and transformed on-premises data (SAP, MS SQL Server, Salesforce) to a cloud-native Lambda Architecture.
+    <ul class="resume-item-list">
+      <li>Established Amazon S3-based Data Lake as storage backbone</li>
+      <li>Implemented ETL operations with PySpark</li>
+      <li>Adopted Amazon Redshift for advanced data warehousing</li>
+    </ul>
+    <p><strong>Results:</strong> Laid the foundation for a Lambda Architecture enabling scalable analytics and data-driven decision-making.</p>
+    <p><strong>Skills & Technologies:</strong> Data Architecture, AWS, PySpark, Redshift</p>
+
+- project: Information Retrieval Chatbot
+  role: Technical Leader (Associated with Claranet Italia)
+  duration: Sep, 2021 — Dec, 2022
+  description: >
+    Designed and implemented a chatbot capable of retrieving information efficiently through natural language interactions.
+    <ul class="resume-item-list">
+      <li>Outlined infrastructure blueprint for chatbot framework</li>
+      <li>Deployed NLP-based ML models for natural language understanding</li>
+      <li>Collaboratively optimized retrieval from a database of 1M documents</li>
+      <li>Implemented monitoring for sustained performance</li>
+    </ul>
+    <p><strong>Results:</strong> Delivered accurate and efficient information retrieval, enhancing user interaction with large document sets.</p>
+    <p><strong>Skills & Technologies:</strong> Neural Networks, Machine Learning, Data Architecture, Cloud Computing</p>
+
+- project: Streamlined Real-time Data Classification System (MLOps)
+  role: Technical Lead (Associated with Claranet Italia)
+  duration: Sep, 2021 — Sep, 2022
+  description: >
+    Designed and implemented a system capable of classifying streaming data in real-time.
+    <ul class="resume-item-list">
+      <li>Defined infrastructure blueprint for real-time classification</li>
+      <li>Orchestrated ML model deployment for fast data classification</li>
+      <li>Implemented monitoring to sustain system performance</li>
+    </ul>
+    <p><strong>Results:</strong> Achieved real-time classification, improving client’s operational efficiency and decision-making.</p>
+    <p><strong>Skills & Technologies:</strong> DevOps, Machine Learning, Cloud Computing</p>
+
+- project: Advanced Data Platform Security with TDD for IAM Policies
+  role: Technical Lead (Associated with Claranet Italia)
+  duration: Apr, 2021 — Jun, 2022
+  description: >
+    Built a fortified data platform with IAM security using Test Driven Development (TDD).
+    <ul class="resume-item-list">
+      <li>Implemented IAM blueprints, encryption, and isolated testing</li>
+      <li>Applied persona-based access controls for data engineers, scientists, and BI professionals</li>
+      <li>Adopted Troposphere, AWS CLI, and pytest for TDD-driven IAM development</li>
+    </ul>
+    <p><strong>Results:</strong> Launched a secure data platform immune to unauthorized access, ensuring compliance with best security standards.</p>
+    <p><strong>Skills & Technologies:</strong> Project Management, AWS, Machine Learning, Security</p>
+
+- project: Transition to Cloud Native for Enhanced Sales Analytics
+  role: Specialist in Cloud Native Transition (Associated with Claranet Italia)
+  duration: Jan, 2021 — Dec, 2021
+  description: >
+    Modernized legacy sales analysis tools into a dynamic cloud environment for scalability and efficiency.
+    <ul class="resume-item-list">
+      <li>Containerized applications using Docker and Amazon ECS</li>
+      <li>Decomposed systems into microservices</li>
+      <li>Adopted AWS Lambda for event-driven processing</li>
+      <li>Integrated monitoring with analytics for performance insights</li>
+    </ul>
+    <p><strong>Results:</strong> Seamlessly migrated tools to the cloud, enabling adaptive, scalable sales tracking and strategy optimization.</p>
+    <p><strong>Skills & Technologies:</strong> Software Engineering, Infrastructure as Code, AWS, Systems Engineering</p>
+
+- project: Transitioning from IBM Netezza to Amazon Redshift
+  role: Migration Specialist (Associated with Claranet Italia)
+  duration: Jun, 2019 — Feb, 2020
+  description: >
+    Supported operational and training activities for the migration from IBM Netezza to Amazon Redshift.
+    <ul class="resume-item-list">
+      <li>Oversaw infrastructure during migration</li>
+      <li>Facilitated deployment and integration of Redshift</li>
+      <li>Delivered training and best practices to client team</li>
+    </ul>
+    <p><strong>Results:</strong> Achieved a smooth migration with minimal operational disruption.</p>
+    <p><strong>Skills & Technologies:</strong> Amazon Redshift, AWS, Training, Migration</p>
+
+- project: Infrastructure Migration & Training Support (Kubernetes & Terraform)
+  role: Specialist (Associated with XPeppers Switzerland)
+  duration: Jun, 2018 — Jun, 2019
+  description: >
+    Provided operational guidance and training to streamline infrastructure monitoring and automation.
+    <ul class="resume-item-list">
+      <li>Maintained infrastructure stability and performance</li>
+      <li>Optimized deployment workflows using Kubernetes and Terraform</li>
+      <li>Delivered training and promoted best practices for DevOps</li>
+    </ul>
+    <p><strong>Results:</strong> Boosted operational efficiency and team proficiency during migration.</p>
+    <p><strong>Skills & Technologies:</strong> Kubernetes, Terraform, AWS, Container Orchestration</p>
+
+- project: Advanced Content Recommendation and Visual Analysis System
+  role: Data Science & Machine Learning Specialist (Associated with XPeppers Switzerland)
+  duration: Jul, 2017 — May, 2019
+  description: >
+    Designed a content recommendation and visual analysis system integrating collaborative filtering, content-based methods, and image recognition.
+    <ul class="resume-item-list">
+      <li>Implemented collaborative and content-based recommendation models</li>
+      <li>Developed hybrid recommendation techniques for personalization</li>
+      <li>Built image classification and object recognition modules for fashion analytics</li>
+    </ul>
+    <p><strong>Results:</strong> Delivered a recommendation engine that enriched user interaction and browsing with personalized suggestions and visual insights.</p>
+    <p><strong>Skills & Technologies:</strong> Machine Learning, Neural Networks, Data Science, Image Recognition</p>
