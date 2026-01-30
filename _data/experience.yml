@@ -1,19 +1,23 @@
 # Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
 
-# Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+- company: Recube Srl
+  position: Cloud Solutions Architect
+  duration: 2025 &mdash; Present
+  summary: >
+    Designed and defined enterprise-grade cloud solutions focused on performance, security, and cost efficiency; translated customer requirements into scalable, resilient, production-ready architectures.
+    Provided technical leadership and end-to-end project oversight, selecting services, integration patterns, and migration strategies.
+    Drove adoption of DevOps practices and Infrastructure as Code to automate deployments, enforce governance and implement security and cost-control policies.
+    Coordinated with product, development, and stakeholder teams to ensure operational adoption and compliance with project requirements.
 
-
-# Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+- company: Claranet Italia
+  position: Cloud Engineer
+  duration: 2022 &mdash; 2025
+  summary: >
+    As a Cloud Engineer, I have gained experience in designing and implementing cloud solutions that optimize performance and security.
+    I am skilled at assessing customer needs and translating them into scalable and resilient architectures.
+    My experience includes managing complex projects and adopting DevOps practices to improve operational efficiency.
+    <ul class="resume-item-list">
+      <li>Design, implementation, and management of cloud infrastructures</li>
+      <li>Coordination of project activities and management of customer relations, ensuring compliance with deadlines</li>
+      <li>Use of Infrastructure as Code (IaC) for automation and governance of multi-account organizations</li>
+    </ul>

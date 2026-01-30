@@ -1,12 +1,16 @@
 # Skills
-# Organizational leadership
-- skill: Organizational leadership
-  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
 
-# Communications strategy
-- skill: Communications strategy
-  description: Content and marketing strategy,
+- skill: Amazon Web Services
+  description: Design and operation of scalable AWS solutions
 
-# Digital content development and creation
-- skill: Digital content development and creation
-  description: Copy writing, graphic design, web design, front-end web development, print design
+- skill: Microsoft Azure
+  description: Deployment and management of Azure services
+
+- skill: Cloud Security
+  description: Implementation of encryption, network segmentation and security controls
+
+- skill: Networking
+  description: Design of cloud and hybrid networks
+
+- skill: Infrastructure as Code (IaC)
+  description: Automated, version-controlled provisioning and lifecycle management of cloud infrastructure

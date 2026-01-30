@@ -1,10 +1,25 @@
 # Recognitions
-- award: Outstanding Achievement
-  organization: Springfield Young Professionals
-  year: 2010, 2014
-  summary: Awarded the Outstanding Achievement award for contributions made to the community and professional accomplishments.
+- award: 'AWS Certified SysOps Administrator - Associate'
+  organization: 'Amazon Web Services (AWS)'
+  year: '2023 — 2026'
+  summary: 'Operational management, deployment, and monitoring of AWS workloads'
 
-- award: Most Likely To Succeed
-  organization: Springfield High School
-  year: 2004
-  summary: Voted Most Likely To Succeed by a panel of my high school peers.
+- award: 'AWS Certified Solutions Architect - Associate'
+  organization: 'Amazon Web Services (AWS)'
+  year: '2022 — 2025'
+  summary: 'Designing cost‑effective, scalable, and resilient AWS architectures'
+
+- award: 'Microsoft Certified: Azure Fundamentals'
+  organization: 'Microsoft'
+  year: '2024'
+  summary: 'Core cloud concepts and basic Azure services and solutions'
+
+- award: 'AWS Knowledge: Serverless'
+  organization: 'Amazon Web Services (AWS)'
+  year: '2023'
+  summary: 'Principles and best practices for serverless application design on AWS'
+
+- award: 'DevSecOps'
+  organization: 'NotSoSecure Training part of Claranet Cyber Security (NSS)'
+  year: '2024'
+  summary: 'Integrating security into DevOps pipelines and secure development practices'

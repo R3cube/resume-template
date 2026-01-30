@@ -1,6 +1,6 @@
 # Site settings
-title: "Jekyll Resume Template"
-description: "A resume template for Jekyll and GitHub Pages sites."
+title: "Fabio Manca - Cloud Solutions Architect"
+description: "Cloud Solutions Architect Crafting Clean And Secure Cloud Infrastructures"
 
 # Build settings
 markdown: kramdown
@@ -10,8 +10,8 @@ sass:
 
 # Resume settings
 resume_avatar:                  "true"
-resume_name:                    "Lisa M. Simpson"
-resume_title:                   "VP of Global Communications"
+resume_name:                    "Fabio Manca"
+resume_title:                   "Cloud Solutions Architect"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           ""
@@ -20,43 +20,28 @@ resume_contact_email:           ""
 resume_contact_telephone:       ""
 resume_contact_address:         "Italy"
 
-resume_header_contact_info:     "Empowering Cloud Success Through Innovation"
+resume_header_contact_info:     "Bring Inventive Technology To Life In The Cloud"
 display_header_contact_info:    "true"
 
-resume_header_intro: "<p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but keep it brief and concise</p>"
+resume_header_intro: "<p>Active, precise, and reliable professional capable of handle technical challenges with determination and method. I believe in the creation of clean and secure cloud infrastructures. My creative approach and commitment to continuous improvement allow me to be a valuable asset in driving the success of initiatives.</p>"
 
-# use "yes" to display the email contact button,
-# "no" to display an "I'm not looking for work" message,
-# or remove the resume_looking_for_work option entirely
-# to leave blank
 resume_looking_for_work:        "no"
 
 # Decide which sections to use
-# comment out to hide
 resume_section_experience:      true
 resume_section_education:       true
-resume_section_projects:        true
+resume_section_projects:        false
 resume_section_skills:          true
 resume_section_recognition:     true
-resume_section_links:           true
-resume_section_associations:    true
-resume_section_interests:       true
+resume_section_links:           false
+resume_section_associations:    false
 
 # Resume social links
-# uncomment the options you wish to display, and add your own URL
 resume_social_links:
   resume_github_url:            ""
-  resume_twitter_url:           ""
-  resume_dribbble_url:          ""
-  resume_facebook_url:          ""
   resume_linkedin_url:          ""
-  resume_instagram_url:         ""
   resume_website_url:           ""
-  resume_medium_url:            ""
 resume_print_social_links:      false
 
 # Design settings
 resume_theme:                   default
-# Note: when editing locally, remember to restart
-# your Jekyll server when you edit this file. Changes
-# to _config.yml are only recognized when the server starts
