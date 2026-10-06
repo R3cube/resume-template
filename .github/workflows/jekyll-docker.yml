@@ -68,7 +68,7 @@ jobs:
             -e JEKYLL_UID=$(id -u) -e JEKYLL_GID=$(id -g) \
             -v "$PWD":/srv/jekyll \
             -v "$PWD/vendor/bundle":/usr/local/bundle \
-            jekyll/jekyll:4 \
+            jekyll/jekyll:4.4.1 \
             sh -lc "bundle install && bundle exec jekyll build --trace"
           test -f _site/index.html || (echo "❌ _site/index.html non trovato" && exit 1)
 
