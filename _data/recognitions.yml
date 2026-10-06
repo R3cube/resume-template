@@ -1,4 +1,14 @@
 # Recognitions
+- award: AWS Certified DevOps Engineer – Professional
+  organization: Amazon Web Services (AWS)
+  year: Jun, 2026 - Jun, 2029
+  summary: Issued by Amazon Web Services, demonstrates expertise in implementing and managing continuous delivery systems and automated operations.
+
+- award: AWS Certified Solutions Architect – Professional
+  organization: Amazon Web Services (AWS)
+  year: May, 2026 - May, 2029
+  summary: Issued by Amazon Web Services, demonstrates advanced ability to design secure, reliable, and cost-optimized AWS solutions for complex use cases.
+
 - award: AWS Authorized Instructor
   organization: Amazon Web Services
   year: 2024
@@ -8,11 +18,6 @@
   organization: Amazon Web Services
   year: 2024
   summary: Validated expertise in designing and deploying scalable, highly available, and fault-tolerant systems on AWS
-
-- award: Elected Delegate
-  organization: Consiglio BIM dell'Adige
-  year: 2025
-  summary: Elected delegate contributing to intermunicipal governance and coordination of shared resources
 
 - award: CCNA Routing and Switching (Introduction to Network)
   organization: Cisco

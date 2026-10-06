@@ -1,15 +1,18 @@
 # Degree
-- degree: Ingegneria Informatica, delle Comunicazioni ed Elettronica
+- degree: Information Engineering and Computer Science (DISI)
   uni: Università di Trento
   year: Present
-  summary: Currently enrolled in the Computer Communications and Electronic Engineering program at the University of Trento.
+  summary: >
+    Currently enrolled in the Computer Communications and Electronic Engineering program at the University of Trento.
 
 - degree: Higher Technical Education Network Infrastructure Virtualization and Cloud Computing
   uni: ITT Marconi Rovereto
   year: Jan 2019 — Mar 2021
-  summary: Two year post secondary program with thesis on workflow automation using Ansible and Docker.
+  summary: > 
+    Advanced training programme in Information Technology, focused on IT infrastructure, networking, virtualization, and cloud computing. Developed skills in object-oriented programming, network configuration and management, virtualization technologies, cloud services, and cybersecurity. The programme also strengthened transversal skills in project management, communication, teamwork, and business organization, combining theoretical learning with practical activities and professional work placements.
 
 - degree: Technical Diploma Informatics
   uni: ITT Marconi Rovereto
   year: Sep 2012 — Jun 2018
-  summary: Studies included programming networking information technology and operating systems with a thesis titled From the first computer to the birth of the internet.
+  summary: >
+    Studies included programming networking information technology and operating systems with a thesis titled From the first computer to the birth of the internet.

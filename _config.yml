@@ -1,6 +1,6 @@
 # Site settings
 title: "Mario Gabriele Ossanna — Resume"
-description: "Cloud Architect & AWS Authorized Instructor focused on secure automation, AWS serverless, and IaC." 
+description: "Cloud Architect & AWS Authorized Instructor, AWS serverless, and IaC." 
 
 # Build settings
 markdown: kramdown
@@ -10,21 +10,21 @@ sass:
 
 resume_avatar:                  "true"
 resume_name:                    "Mario Gabriele Ossanna"
-resume_title:                   "Cloud Architect"   # current employee role at Recube
+resume_title:                   "Cloud Architect & AWS Authorized Instructor"   # current employee role at Recube
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           ""
 
 # the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone:       ""
-resume_contact_address:         ""
+resume_contact_address:         "Italy"
 
 # short motto aligned to mission (Cloud/DevOps, reliability)
 resume_header_contact_info:     "Automate. Secure. Deliver."
 display_header_contact_info:    "true"
 
 # executive summary (condensed from the PRESENTAZIONE section)
-resume_header_intro: "<p>Curious, proactive cloud professional with a strong bias for continuous learning and knowledge sharing as an instructor. Experienced in Ansible, CloudFormation, Docker, and core AWS (compute, networking, serverless). Known for teamwork, clear client communication, and leading small teams to deliver resilient solutions on time and to high standards.</p>"
+resume_header_intro: "<p>Cloud Architect and AWS Authorized Instructor with a strong background in designing secure, scalable, and resilient cloud infrastructures. Specialized in AWS, Infrastructure as Code, cloud security, automation, DevOps practices, and architectural governance. Experienced in leading technical teams, supporting complex cloud transformations, and translating business requirements into reliable and efficient solutions. Passionate about knowledge sharing, continuous improvement, and helping teams adopt modern cloud technologies and best practices.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
